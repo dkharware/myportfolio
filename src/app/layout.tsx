@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'PixelCanvas Portfolio | Frontend Developer',
+  title: 'Deepak Kharware | Frontend Developer',
   description: 'Expert frontend developer portfolio showcasing 5 years of experience in high-performance web interfaces.',
 };
 

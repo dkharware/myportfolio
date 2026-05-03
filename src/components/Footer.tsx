@@ -9,11 +9,11 @@ export function Footer() {
           <div className="bg-primary p-1.5 rounded-md">
             <Code2 className="text-primary-foreground h-5 w-5" />
           </div>
-          <span className="font-bold text-xl tracking-tight">PixelCanvas</span>
+          <span className="font-bold text-xl tracking-tight">Deepak Kharware</span>
         </div>
         
         <p className="text-sm text-muted-foreground flex items-center gap-1.5 order-last md:order-none">
-          © {new Date().getFullYear()} PixelCanvas. Built with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using Next.js & Tailwind.
+          © {new Date().getFullYear()} Deepak Kharware. Built with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using Next.js & Tailwind.
         </p>
 
         <div className="flex gap-8">

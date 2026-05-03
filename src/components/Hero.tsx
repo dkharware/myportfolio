@@ -16,14 +16,14 @@ export function Hero() {
               Available for New Projects
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-foreground">
-              Building <span className="text-primary">Pixel-Perfect</span> Web Experiences
+              Hi, I'm <span className="text-primary">Deepak Kharware</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-xl">
               I'm a Frontend Developer with 5 years of experience delivering responsive and high-performance web interfaces. Focused on clean code, UI consistency, and building user-centric applications.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="gap-2 shadow-lg shadow-primary/20">
-                View My Work <ArrowRight className="h-4 w-4" />
+              <Button size="lg" asChild className="gap-2 shadow-lg shadow-primary/20">
+                <a href="#projects">View My Work <ArrowRight className="h-4 w-4" /></a>
               </Button>
               <div className="flex items-center gap-2 px-2">
                 <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary transition-all">

@@ -37,7 +37,7 @@ export function Navigation() {
           <div className="bg-primary p-2 rounded-lg group-hover:rotate-6 transition-transform">
             <Code2 className="text-primary-foreground h-6 w-6" />
           </div>
-          <span className="text-xl font-bold tracking-tight">PixelCanvas</span>
+          <span className="text-xl font-bold tracking-tight">Deepak Kharware</span>
         </Link>
 
         {/* Desktop Nav */}
