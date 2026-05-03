@@ -1,7 +1,15 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useState } from 'react';
 import { Code2, Heart } from 'lucide-react';
 
 export function Footer() {
+  const [year, setYear] = useState<number | string>('2025');
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="py-12 px-6 bg-muted/30 border-t">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
@@ -13,7 +21,7 @@ export function Footer() {
         </div>
         
         <p className="text-sm text-muted-foreground flex items-center gap-1.5 order-last md:order-none">
-          © {new Date().getFullYear()} Deepak Kharware. Built with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using Next.js & Tailwind.
+          © {year} Deepak Kharware. Built with <Heart className="h-4 w-4 text-red-500 fill-red-500" /> using Next.js & Tailwind.
         </p>
 
         <div className="flex gap-8">
