@@ -18,7 +18,7 @@ export function Hero() {
             <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight text-foreground">
               Building <span className="text-primary">Pixel-Perfect</span> Web Experiences
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
+            <p className="text-xl text-muted-foreground leading-relaxed max-xl">
               I'm a Frontend Developer with 5 years of experience delivering responsive and high-performance web interfaces. Focused on clean code, UI consistency, and building user-centric applications.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
@@ -33,7 +33,7 @@ export function Hero() {
                   <a href="https://linkedin.com" target="_blank"><Linkedin className="h-5 w-5" /></a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary transition-all">
-                  <a href="mailto:hello@pixelcanvas.com"><Mail className="h-5 w-5" /></a>
+                  <a href="mailto:dkharware@gmail.com"><Mail className="h-5 w-5" /></a>
                 </Button>
               </div>
             </div>

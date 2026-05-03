@@ -48,7 +48,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Email</h4>
-                  <p className="text-muted-foreground">hello@pixelcanvas.com</p>
+                  <p className="text-muted-foreground">dkharware@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 group">
@@ -57,7 +57,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 000-0000</p>
+                  <p className="text-muted-foreground">+91 9644041429</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 group">
@@ -66,7 +66,7 @@ export function ContactForm() {
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA (Remote Friendly)</p>
+                  <p className="text-muted-foreground">Indore, MP, India</p>
                 </div>
               </div>
             </div>
