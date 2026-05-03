@@ -1,3 +1,23 @@
+import { Navigation } from '@/components/Navigation';
+import { Hero } from '@/components/Hero';
+import { Skills } from '@/components/Skills';
+import { Projects } from '@/components/Projects';
+import { AICoverLetterTool } from '@/components/AICoverLetterTool';
+import { ContactForm } from '@/components/ContactForm';
+import { Footer } from '@/components/Footer';
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-grow">
+        <Hero />
+        <Skills />
+        <Projects />
+        <AICoverLetterTool />
+        <ContactForm />
+      </main>
+      <Footer />
+    </div>
+  );
 }

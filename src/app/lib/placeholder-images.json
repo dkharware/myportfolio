@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract tech background",
+      "imageUrl": "https://picsum.photos/seed/pixel-hero/1200/800",
+      "imageHint": "abstract tech"
+    },
+    {
+      "id": "profile-pic",
+      "description": "Professional developer headshot",
+      "imageUrl": "https://picsum.photos/seed/pixel-dev/400/400",
+      "imageHint": "professional man"
+    },
+    {
+      "id": "project-1",
+      "description": "SaaS Dashboard interface",
+      "imageUrl": "https://picsum.photos/seed/proj1/800/600",
+      "imageHint": "dashboard interface"
+    },
+    {
+      "id": "project-2",
+      "description": "E-commerce mobile app",
+      "imageUrl": "https://picsum.photos/seed/proj2/800/600",
+      "imageHint": "ecommerce app"
+    },
+    {
+      "id": "project-3",
+      "description": "Financial analytics platform",
+      "imageUrl": "https://picsum.photos/seed/proj3/800/600",
+      "imageHint": "data charts"
+    }
+  ]
+}
