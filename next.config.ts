@@ -8,10 +8,11 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Moved from experimental to root to fix "Unrecognized key" error in Next.js 15 Turbopack
-  // @ts-ignore - Some versions of NextConfig types might not have this at the root yet
+  // Ensure development origins are allowed for HMR and workstation access
+  // @ts-ignore - allowedDevOrigins is recognized by Next.js 15 Turbopack at the root level
   allowedDevOrigins: [
     '6000-firebase-studio-1777806900934.cluster-edb2jv34dnhjisxuq5m7l37ccy.cloudworkstations.dev',
+    'localhost:9002'
   ],
   images: {
     remotePatterns: [
