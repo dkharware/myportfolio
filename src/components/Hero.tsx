@@ -27,10 +27,10 @@ export function Hero() {
               </Button>
               <div className="flex items-center gap-2 px-2">
                 <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary transition-all">
-                  <a href="https://github.com" target="_blank"><Github className="h-5 w-5" /></a>
+                  <a href="https://github.com/dkharware" target="_blank" rel="noopener noreferrer"><Github className="h-5 w-5" /></a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary transition-all">
-                  <a href="https://linkedin.com" target="_blank"><Linkedin className="h-5 w-5" /></a>
+                  <a href="https://www.linkedin.com/in/deepak-singh-kharware/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-5 w-5" /></a>
                 </Button>
                 <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary transition-all">
                   <a href="mailto:dkharware@gmail.com"><Mail className="h-5 w-5" /></a>

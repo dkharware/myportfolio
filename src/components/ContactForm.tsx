@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
-import { Send, MapPin, Phone, Mail, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, MapPin, Phone, Mail, Github, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 export function ContactForm() {
@@ -26,6 +26,11 @@ export function ContactForm() {
       (e.target as HTMLFormElement).reset();
     }, 1500);
   };
+
+  const socialLinks = [
+    { icon: Github, href: "https://github.com/dkharware" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/deepak-singh-kharware/" },
+  ];
 
   return (
     <section id="contact" className="py-24 px-6 bg-background relative overflow-hidden">
@@ -74,9 +79,11 @@ export function ContactForm() {
             <div className="pt-8">
               <h4 className="font-bold text-lg mb-4">Follow Me</h4>
               <div className="flex gap-4">
-                {[Github, Linkedin, Twitter].map((Icon, idx) => (
-                  <Button key={idx} variant="outline" size="icon" className="h-12 w-12 rounded-xl hover:bg-primary hover:text-white transition-all">
-                    <Icon className="h-5 w-5" />
+                {socialLinks.map((social, idx) => (
+                  <Button key={idx} variant="outline" size="icon" asChild className="h-12 w-12 rounded-xl hover:bg-primary hover:text-white transition-all">
+                    <a href={social.href} target="_blank" rel="noopener noreferrer">
+                      <social.icon className="h-5 w-5" />
+                    </a>
                   </Button>
                 ))}
               </div>
