@@ -27,9 +27,9 @@
     },
     {
       "id": "project-bundle",
-      "description": "Bundle Product Add-to-Cart System",
-      "imageUrl": "https://picsum.photos/seed/bundle-cart/800/600",
-      "imageHint": "shopping cart"
+      "description": "Protein Country - Bundle Food System",
+      "imageUrl": "https://picsum.photos/seed/protein-food/800/600",
+      "imageHint": "health food"
     },
     {
       "id": "project-alkhaleej",
@@ -42,6 +42,12 @@
       "description": "Marimekko Global Fashion eCommerce",
       "imageUrl": "https://picsum.photos/seed/fashion-marimekko/800/600",
       "imageHint": "fashion store"
+    },
+    {
+      "id": "project-medical",
+      "description": "Med-Tech Supply - Healthcare eCommerce",
+      "imageUrl": "https://picsum.photos/seed/medical-portal/800/600",
+      "imageHint": "medical equipment"
     }
   ]
 }
