@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -54,23 +53,23 @@ const PROJECTS = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-background">
+    <section id="projects" className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">Featured <span className="text-primary">Impact</span></h2>
-            <p className="text-muted-foreground max-w-2xl text-lg">
+            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
               Strategic projects demonstrating technical leadership in building high-conversion, scalable web ecosystems for global brands.
             </p>
           </div>
-          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-all shadow-md">
+          <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-all shadow-md w-full md:w-auto">
             View All Work
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
           {PROJECTS.map((project, idx) => (
-            <Card key={idx} className="overflow-hidden border-none shadow-xl hover:shadow-2xl transition-all duration-500 group flex flex-col h-full bg-white">
+            <Card key={idx} className="overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 group flex flex-col h-full bg-white">
               <div className="relative aspect-video overflow-hidden">
                 {project.image && (
                   <Image
@@ -81,25 +80,25 @@ export function Projects() {
                     data-ai-hint={project.image.imageHint}
                   />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 md:p-6">
                   <Button variant="secondary" size="sm" asChild className="rounded-full shadow-lg">
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink className="h-4 w-4 mr-2" /> Visit Site</a>
                   </Button>
                 </div>
               </div>
-              <CardContent className="p-6 space-y-4 flex-grow">
+              <CardContent className="p-5 md:p-6 space-y-4 flex-grow">
                 <div className="flex items-center gap-3 text-primary">
                   {project.icon}
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                   {project.description}
                 </p>
               </CardContent>
-              <CardFooter className="px-6 pb-8 pt-0 mt-auto">
+              <CardFooter className="px-5 md:px-6 pb-6 md:pb-8 pt-0 mt-auto">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map(tag => (
-                    <Badge key={tag} variant="outline" className="text-[10px] tracking-wider uppercase font-bold py-1 bg-muted/20">
+                    <Badge key={tag} variant="outline" className="text-[9px] md:text-[10px] tracking-wider uppercase font-bold py-1 bg-muted/20">
                       {tag}
                     </Badge>
                   ))}

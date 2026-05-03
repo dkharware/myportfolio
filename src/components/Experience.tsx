@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Briefcase, Calendar, Award } from 'lucide-react';
@@ -38,20 +37,20 @@ const EXPERIENCES = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-background">
+    <section id="experience" className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-12 lg:mb-16 gap-8">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-5xl font-bold">Career <span className="text-primary">Journey</span></h2>
-            <p className="text-muted-foreground max-w-2xl text-lg">
+            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
               Leading teams and delivering high-performance digital experiences since 2019.
             </p>
           </div>
-          <div className="bg-primary/10 border border-primary/20 p-6 rounded-2xl flex items-center gap-4">
-             <Award className="h-10 w-10 text-primary" />
+          <div className="bg-primary/10 border border-primary/20 p-4 md:p-6 rounded-2xl flex items-center gap-4 w-full lg:w-auto">
+             <Award className="h-8 w-8 md:h-10 md:w-10 text-primary shrink-0" />
              <div>
-                <h4 className="font-bold">Unmatched Dedication Award</h4>
-                <p className="text-sm text-muted-foreground">Received in 2021 for Frontend Excellence</p>
+                <h4 className="font-bold text-sm md:text-base">Unmatched Dedication Award</h4>
+                <p className="text-xs md:text-sm text-muted-foreground">Received in 2021 for Frontend Excellence</p>
              </div>
           </div>
         </div>
@@ -60,19 +59,19 @@ export function Experience() {
           {EXPERIENCES.map((exp, idx) => (
             <div key={idx} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
               {/* Dot */}
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-primary bg-background text-primary shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
                 <Briefcase className="h-5 w-5" />
               </div>
               {/* Content */}
-              <Card className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 shadow-md hover:shadow-xl transition-shadow border-none bg-white rounded-2xl">
+              <Card className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-5 md:p-6 shadow-md hover:shadow-xl transition-shadow border-none bg-white rounded-2xl">
                 <CardContent className="p-0 space-y-3">
-                  <div className="flex items-center gap-2 text-primary font-bold text-sm">
+                  <div className="flex items-center gap-2 text-primary font-bold text-xs md:text-sm">
                     <Calendar className="h-4 w-4" />
                     {exp.period}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground leading-tight">{exp.role}</h3>
-                  <h4 className="font-semibold text-primary/80">{exp.company}</h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight">{exp.role}</h3>
+                  <h4 className="font-semibold text-primary/80 text-sm md:text-base">{exp.company}</h4>
+                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                     {exp.description}
                   </p>
                 </CardContent>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -39,28 +38,28 @@ const SKILL_CATEGORIES = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-muted/30">
+    <section id="skills" className="py-20 px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-12 md:mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">Technical <span className="text-primary">Mastery</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
             A comprehensive toolkit focused on creating scalable, high-performance eCommerce and web solutions.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {SKILL_CATEGORIES.map((category, idx) => (
             <Card key={idx} className="bg-white hover:shadow-xl transition-all border-none group">
-              <CardContent className="p-8 space-y-6">
+              <CardContent className="p-6 md:p-8 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                  <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors duration-300 shrink-0">
                     {category.icon}
                   </div>
-                  <h3 className="text-xl font-bold">{category.title}</h3>
+                  <h3 className="text-lg md:text-xl font-bold">{category.title}</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="px-3 py-1 font-medium bg-muted/50 hover:bg-primary hover:text-white transition-all cursor-default">
+                    <Badge key={skill} variant="secondary" className="px-3 py-1 text-[10px] md:text-xs font-medium bg-muted/50 hover:bg-primary hover:text-white transition-all cursor-default">
                       {skill}
                     </Badge>
                   ))}
