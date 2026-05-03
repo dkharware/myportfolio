@@ -54,11 +54,11 @@ export function Hero() {
               {profileImg && (
                 <Image
                   src={profileImg.imageUrl}
-                  alt="Deepak Singh Kharware Profile"
+                  alt="Deepak Singh Kharware - Professional Headshot"
                   width={600}
                   height={600}
-                  className="rounded-xl object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700 hover:scale-[1.02]"
-                  data-ai-hint="professional man"
+                  className="rounded-xl object-cover hover:scale-[1.02] transition-all duration-700"
+                  data-ai-hint={profileImg.imageHint}
                 />
               )}
               <div className="absolute bottom-10 left-10 right-10 p-6 bg-white/90 backdrop-blur-md rounded-xl border border-white/50 shadow-lg">

@@ -9,39 +9,39 @@
     },
     {
       "id": "profile-pic",
-      "description": "Professional developer headshot",
-      "imageUrl": "https://picsum.photos/seed/pixel-dev/400/400",
-      "imageHint": "professional man"
+      "description": "Deepak Singh Kharware - Professional Headshot",
+      "imageUrl": "https://picsum.photos/seed/deepak-dev/600/600",
+      "imageHint": "man suit"
     },
     {
       "id": "project-encompass",
-      "description": "E-commerce platform interface",
-      "imageUrl": "https://picsum.photos/seed/encompass/800/600",
-      "imageHint": "ecommerce store"
+      "description": "Encompass eCommerce - Samsung/Sony Parts",
+      "imageUrl": "https://picsum.photos/seed/encompass-supply/800/600",
+      "imageHint": "ecommerce interface"
     },
     {
       "id": "project-storedev",
-      "description": "Developer blog platform",
-      "imageUrl": "https://picsum.photos/seed/storedev/800/600",
-      "imageHint": "blogging platform"
+      "description": "StoreDevGuide - Headless Shopify Blog",
+      "imageUrl": "https://picsum.photos/seed/storedev-guide/800/600",
+      "imageHint": "coding blog"
     },
     {
       "id": "project-bundle",
-      "description": "Custom cart bundle system",
-      "imageUrl": "https://picsum.photos/seed/bundle/800/600",
-      "imageHint": "cart system"
+      "description": "Bundle Product Add-to-Cart System",
+      "imageUrl": "https://picsum.photos/seed/bundle-cart/800/600",
+      "imageHint": "shopping cart"
     },
     {
       "id": "project-alkhaleej",
-      "description": "Tour booking website",
-      "imageUrl": "https://picsum.photos/seed/tours/800/600",
+      "description": "Al Khaleej Tours Booking Platform",
+      "imageUrl": "https://picsum.photos/seed/tours-booking/800/600",
       "imageHint": "travel booking"
     },
     {
       "id": "project-marimekko",
-      "description": "Fashion brand ecommerce",
-      "imageUrl": "https://picsum.photos/seed/fashion/800/600",
-      "imageHint": "fashion website"
+      "description": "Marimekko Global Fashion eCommerce",
+      "imageUrl": "https://picsum.photos/seed/fashion-marimekko/800/600",
+      "imageHint": "fashion store"
     }
   ]
 }

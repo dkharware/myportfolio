@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Abstract tech background",
+      "imageUrl": "https://picsum.photos/seed/pixel-hero/1200/800",
+      "imageHint": "abstract tech"
+    },
+    {
+      "id": "profile-pic",
+      "description": "Deepak Singh Kharware - Professional Headshot",
+      "imageUrl": "https://picsum.photos/seed/deepak-dev/600/600",
+      "imageHint": "man suit"
+    },
+    {
+      "id": "project-encompass",
+      "description": "Encompass eCommerce - Samsung/Sony Parts",
+      "imageUrl": "https://picsum.photos/seed/encompass-supply/800/600",
+      "imageHint": "ecommerce interface"
+    },
+    {
+      "id": "project-storedev",
+      "description": "StoreDevGuide - Headless Shopify Blog",
+      "imageUrl": "https://picsum.photos/seed/storedev-guide/800/600",
+      "imageHint": "coding blog"
+    },
+    {
+      "id": "project-bundle",
+      "description": "Bundle Product Add-to-Cart System",
+      "imageUrl": "https://picsum.photos/seed/bundle-cart/800/600",
+      "imageHint": "shopping cart"
+    },
+    {
+      "id": "project-alkhaleej",
+      "description": "Al Khaleej Tours Booking Platform",
+      "imageUrl": "https://picsum.photos/seed/tours-booking/800/600",
+      "imageHint": "travel booking"
+    },
+    {
+      "id": "project-marimekko",
+      "description": "Marimekko Global Fashion eCommerce",
+      "imageUrl": "https://picsum.photos/seed/fashion-marimekko/800/600",
+      "imageHint": "fashion store"
+    }
+  ]
 }
