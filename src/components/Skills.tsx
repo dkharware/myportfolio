@@ -1,38 +1,39 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Code2, Monitor, Server, Smartphone, Zap, Palette } from 'lucide-react';
+import { Code2, Monitor, Server, Smartphone, Zap, Palette, ShoppingBag, Terminal } from 'lucide-react';
 
 const SKILL_CATEGORIES = [
   {
-    title: 'Frontend Fundamentals',
+    title: 'Tech Stack',
     icon: <Code2 className="h-6 w-6 text-primary" />,
-    skills: ['React', 'Next.js', 'TypeScript', 'HTML5', 'CSS3', 'JavaScript (ES6+)'],
+    skills: ['Next.js', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS'],
   },
   {
-    title: 'Styling & UI',
-    icon: <Palette className="h-6 w-6 text-primary" />,
-    skills: ['Tailwind CSS', 'Sass/SCSS', 'Styled Components', 'Framer Motion', 'Radix UI', 'Shadcn UI'],
+    title: 'Shopify Ecosystem',
+    icon: <ShoppingBag className="h-6 w-6 text-primary" />,
+    skills: ['Liquid', 'Headless Shopify', 'Storefront API', 'Custom Theme Dev', 'Shopify Cart API'],
   },
   {
-    title: 'State & Performance',
-    icon: <Zap className="h-6 w-6 text-primary" />,
-    skills: ['Redux', 'Zustand', 'React Query', 'Performance Optimization', 'Web Vitals'],
+    title: 'Tools & AI',
+    icon: <Terminal className="h-6 w-6 text-primary" />,
+    skills: ['Git', 'GitHub', 'GitHub Copilot', 'Cursor', 'Claude', 'VSCode', 'Framer Motion'],
   },
   {
-    title: 'Responsive & Platform',
-    icon: <Smartphone className="h-6 w-6 text-primary" />,
-    skills: ['Mobile-First Design', 'Progressive Web Apps', 'Cross-Browser Compatibility', 'Accessibility (a11y)'],
-  },
-  {
-    title: 'Backend & Tools',
-    icon: <Server className="h-6 w-6 text-primary" />,
-    skills: ['Node.js', 'GraphQL', 'Firebase', 'Git/GitHub', 'CI/CD Pipelines', 'Docker'],
-  },
-  {
-    title: 'Professional Workflow',
+    title: 'Leadership',
     icon: <Monitor className="h-6 w-6 text-primary" />,
-    skills: ['Agile/Scrum', 'Code Review', 'Pair Programming', 'Technical Documentation', 'System Design'],
+    skills: ['Team Leading', 'Code Reviews', 'Agile/Scrum', 'Mentoring', 'Performance Optimization'],
+  },
+  {
+    title: 'Optimization',
+    icon: <Zap className="h-6 w-6 text-primary" />,
+    skills: ['SSR & SSG', 'SEO Optimization', 'Web Vitals', 'Lazy Loading', 'Asset Delivery'],
+  },
+  {
+    title: 'Design & Workflow',
+    icon: <Palette className="h-6 w-6 text-primary" />,
+    skills: ['Figma', 'UI/UX Implementation', 'Monday.com', 'Cross-Browser Compatibility'],
   },
 ];
 
@@ -42,14 +43,14 @@ export function Skills() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">Technical <span className="text-primary">Mastery</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A diverse toolkit built over 5 years, focused on creating scalable, efficient, and accessible web solutions.
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            A comprehensive toolkit focused on creating scalable, high-performance eCommerce and web solutions.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SKILL_CATEGORIES.map((category, idx) => (
-            <Card key={idx} className="bg-white hover:shadow-xl transition-shadow border-none group">
+            <Card key={idx} className="bg-white hover:shadow-xl transition-all border-none group">
               <CardContent className="p-8 space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors duration-300">

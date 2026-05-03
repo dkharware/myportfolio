@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -13,22 +14,34 @@
       "imageHint": "professional man"
     },
     {
-      "id": "project-1",
-      "description": "SaaS Dashboard interface",
-      "imageUrl": "https://picsum.photos/seed/proj1/800/600",
-      "imageHint": "dashboard interface"
+      "id": "project-encompass",
+      "description": "E-commerce platform interface",
+      "imageUrl": "https://picsum.photos/seed/encompass/800/600",
+      "imageHint": "ecommerce store"
     },
     {
-      "id": "project-2",
-      "description": "E-commerce mobile app",
-      "imageUrl": "https://picsum.photos/seed/proj2/800/600",
-      "imageHint": "ecommerce app"
+      "id": "project-storedev",
+      "description": "Developer blog platform",
+      "imageUrl": "https://picsum.photos/seed/storedev/800/600",
+      "imageHint": "blogging platform"
     },
     {
-      "id": "project-3",
-      "description": "Financial analytics platform",
-      "imageUrl": "https://picsum.photos/seed/proj3/800/600",
-      "imageHint": "data charts"
+      "id": "project-bundle",
+      "description": "Custom cart bundle system",
+      "imageUrl": "https://picsum.photos/seed/bundle/800/600",
+      "imageHint": "cart system"
+    },
+    {
+      "id": "project-alkhaleej",
+      "description": "Tour booking website",
+      "imageUrl": "https://picsum.photos/seed/tours/800/600",
+      "imageHint": "travel booking"
+    },
+    {
+      "id": "project-marimekko",
+      "description": "Fashion brand ecommerce",
+      "imageUrl": "https://picsum.photos/seed/fashion/800/600",
+      "imageHint": "fashion website"
     }
   ]
 }
