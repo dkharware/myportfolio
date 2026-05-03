@@ -22,7 +22,6 @@ export function Navigation() {
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'AI Assistant', href: '#ai-tool' },
     { name: 'Contact', href: '#contact' },
   ];
 
