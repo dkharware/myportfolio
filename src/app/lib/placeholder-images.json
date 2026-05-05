@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -22,7 +23,7 @@
       "id": "project-encompass",
       "description": "Encompass eCommerce - Samsung/Sony Parts",
       "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungparts.com?w=800&h=600",
-      "imageHint": "ecommerce site"
+      "imageHint": "auto parts"
     },
     {
       "id": "project-storedev",
@@ -37,10 +38,10 @@
       "imageHint": "health food"
     },
     {
-      "id": "project-alkhaleej",
-      "description": "Al Khaleej Tours Booking Platform",
-      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Falkhaleejtours.org?w=800&h=600",
-      "imageHint": "travel booking"
+      "id": "project-intercity",
+      "description": "Intercity Packers Movers Indore - WordPress Platform",
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intercitypackersmoversindore.com%2F?w=800&h=600",
+      "imageHint": "truck moving"
     },
     {
       "id": "project-marimekko",

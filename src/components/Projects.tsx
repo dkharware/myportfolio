@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -29,7 +30,8 @@ import {
   Cpu,
   Tv,
   Car,
-  Settings
+  Settings,
+  Truck
 } from 'lucide-react';
 
 const CATEGORIES = [
@@ -39,7 +41,7 @@ const CATEGORIES = [
   "Electronics",
   "Medical",
   "Blog",
-  "Travel",
+  "Logistics",
   "Fashion"
 ];
 
@@ -261,18 +263,19 @@ const PROJECTS = [
     ]
   },
   {
-    title: 'Al Khaleej Tours',
-    category: 'Travel',
-    description: 'Luxury travel booking platform for the MENA region. Real-time availability engine.',
-    role: 'Lead Frontend Developer',
-    url: 'https://alkhaleejtours.org',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Falkhaleejtours.org?w=800&h=600`,
-    tags: ['Booking Engine', 'API-First', 'React'],
-    icon: <Globe className="h-6 w-6" />,
+    title: 'Intercity Packers Movers',
+    category: 'Logistics',
+    description: 'High-conversion WordPress platform for intercity logistics and relocation services. Optimized for local SEO and lead generation.',
+    role: 'Frontend & WordPress Developer',
+    url: 'https://www.intercitypackersmoversindore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intercitypackersmoversindore.com%2F?w=800&h=600`,
+    tags: ['WordPress', 'Elementor', 'Local SEO'],
+    icon: <Truck className="h-6 w-6" />,
     achievements: [
-      'Engineered an asynchronous tour availability and pricing engine',
-      'Developed a custom date-picker for multi-day tour packages',
-      'Integrated Arabic RTL (Right-to-Left) layout support'
+      'Architected a custom WordPress theme optimized for logistics service performance',
+      'Implemented advanced local SEO strategies achieving first-page search rankings',
+      'Engineered high-conversion lead capture workflows for relocation inquiries',
+      'Optimized mobile performance for service-on-the-go user scenarios'
     ]
   },
   {
