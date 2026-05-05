@@ -62,6 +62,22 @@ const PROJECTS = [
     ]
   },
   {
+    title: 'PartStore',
+    category: 'Appliance Parts',
+    description: 'Front-End Lead architecting scalable Shopify-based eCommerce for US OEM brands. Focused on custom theme development and interactive parts lookup.',
+    role: 'Senior Front-End Lead',
+    url: 'https://partstore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fpartstore.com?w=800&h=600`,
+    tags: ['Shopify', 'React', 'OEM'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Built a scalable Shopify architecture for official parts distribution',
+      'Implemented exploded view features allowing visual interaction with product components',
+      'Optimized frontend performance for high-volume technical part lookup',
+      'Managed team coordination to ensure smooth feature delivery'
+    ]
+  },
+  {
     title: 'Giftmix',
     category: 'Gifting / Bundling',
     description: 'Engineered a custom advanced bundle system allowing users to select multiple products and add them as a single order using Shopify Cart API.',
