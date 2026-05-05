@@ -400,11 +400,11 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
 
   return (
     <section id="projects" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
           {/* Enhanced Tab Navigation Fix */}
           <div className="w-full">
-            <div className="flex justify-start md:justify-center overflow-x-auto pb-6 scrollbar-hide touch-pan-x">
+            <div className="flex justify-start overflow-x-auto pb-6 scrollbar-hide touch-pan-x px-6">
               <TabsList className="flex items-center gap-2 bg-secondary/30 p-2 rounded-[2rem] h-auto border-2 border-primary/5">
                 {CATEGORIES.map((cat) => (
                   <TabsTrigger 
@@ -419,7 +419,7 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative px-6">
             {isSlider ? (
               <Carousel className="w-full" opts={{ align: "start", loop: true }}>
                 <CarouselContent className="-ml-6">
