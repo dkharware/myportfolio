@@ -40,7 +40,8 @@ import {
   Gift,
   Zap,
   Monitor,
-  ArrowRight
+  ArrowRight,
+  Sparkles
 } from 'lucide-react';
 
 const CATEGORIES = [
@@ -50,10 +51,11 @@ const CATEGORIES = [
   "Electronics",
   "Gifting / Bundling",
   "Logistics",
-  "Fashion"
+  "Fashion",
+  "Jewelry"
 ];
 
-const OEM_DESCRIPTION = "Front-End Lead building scalable Shopify-based eCommerce platforms for US OEM brands. Focused on custom theme development, Shopify API integration for parts management, and interactive exploded views.";
+const OEM_DESCRIPTION = "I’ve been working as a Front-End Lead, building scalable Shopify-based eCommerce platforms for US OEM brands. My work involved developing custom themes, integrating Shopify APIs for product and collection management, and implementing an exploded view feature that allows users to interact with product components visually. I mainly work with JavaScript, and I focus heavily on performance optimization and user experience. I also handle team coordination and ensure smooth delivery of features.";
 
 const OEM_ACHIEVEMENTS = [
   "Architected scalable Shopify-based platforms for major US OEM brands",
@@ -170,7 +172,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://originalrepairparts.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Foriginalrepairparts.com?w=800&h=600`,
-    tags: ['Shopify', 'Liquid', 'API Integration'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -217,6 +219,22 @@ const PROJECTS = [
     tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
+  },
+  {
+    title: 'Jewelebrate',
+    category: 'Jewelry',
+    description: 'Premium fine jewelry eCommerce platform. Focused on luxury UI/UX, complex product attributes, and secure checkout integration for high-value transactions.',
+    role: 'Senior Frontend Developer',
+    url: 'https://jewelebrate.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fjewelebrate.com?w=800&h=600`,
+    tags: ['Shopify', 'Liquid', 'JavaScript', 'Luxury UX'],
+    icon: <Sparkles className="h-6 w-6" />,
+    achievements: [
+      'Developed high-fidelity Shopify templates for premium jewelry collections',
+      'Implemented custom product filters for metal type, purity, and gemstone attributes',
+      'Optimized image delivery for high-resolution jewelry photography',
+      'Engineered responsive layouts ensuring a premium experience on mobile devices'
+    ]
   },
   {
     title: 'Giftmix',
