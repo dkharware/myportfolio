@@ -45,7 +45,7 @@ const EXPERIENCES = [
   },
   {
     company: 'Cheshta Infotech Pvt. Ltd',
-    role: 'Web Designer',
+    role: 'Junior Developer',
     period: 'Jul 2019 – Sep 2020',
     achievements: [
       'Designed and developed 50+ responsive websites with HTML/CSS/JS',

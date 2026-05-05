@@ -81,11 +81,11 @@ export function Hero() {
               <div className="absolute bottom-6 left-6 right-6 p-4 glass-card rounded-2xl border border-white/40 shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center text-white text-lg font-black shadow-lg shadow-primary/40 shrink-0">
-                    3+
+                    6+
                   </div>
                   <div>
-                    <h3 className="font-black text-foreground text-sm leading-tight">Years Leadership</h3>
-                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">6+ Years Total Exp.</p>
+                    <h3 className="font-black text-foreground text-sm leading-tight">Years Experience</h3>
+                    <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Proven Expertise</p>
                   </div>
                 </div>
               </div>
