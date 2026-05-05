@@ -71,7 +71,7 @@ const PROJECTS = [
     role: 'Senior Front-End Lead',
     url: 'https://samsungparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungparts.com?w=800&h=600`,
-    tags: ['Next.js', 'React', 'Shopify API'],
+    tags: ['Shopify API', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -82,7 +82,7 @@ const PROJECTS = [
     role: 'Senior Front-End Lead',
     url: 'https://lgparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Flgparts.com?w=800&h=600`,
-    tags: ['Next.js', 'React', 'Shopify API'],
+    tags: ['Shopify API', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -93,7 +93,7 @@ const PROJECTS = [
     role: 'Senior Front-End Lead',
     url: 'https://sonyparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsonyparts.com?w=800&h=600`,
-    tags: ['Next.js', 'React', 'Shopify API'],
+    tags: ['Shopify API', 'Liquid', 'JavaScript'],
     icon: <Tv className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -104,7 +104,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://bertazzonipartstore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fbertazzonipartstore.com?w=800&h=600`,
-    tags: ['Shopify', 'React', 'JavaScript'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Zap className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -115,7 +115,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://genuinereplacementparts.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fgenuinereplacementparts.com?w=800&h=600`,
-    tags: ['Shopify', 'Next.js', 'React'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -126,7 +126,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://liebherrpartsstore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fliebherrpartsstore.com?w=800&h=600`,
-    tags: ['Next.js', 'Shopify', 'React'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -137,7 +137,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://liebherrproappliances.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fliebherrproappliances.com?w=800&h=600`,
-    tags: ['Shopify API', 'Next.js', 'React'],
+    tags: ['Shopify API', 'Liquid', 'JavaScript'],
     icon: <Zap className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -148,7 +148,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://bekopartstore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fbekopartstore.com?w=800&h=600`,
-    tags: ['Shopify', 'React', 'JavaScript'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -159,7 +159,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://smegspareparts.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsmegspareparts.com?w=800&h=600`,
-    tags: ['Shopify', 'React', 'Next.js'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Zap className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -170,7 +170,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://originalrepairparts.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Foriginalrepairparts.com?w=800&h=600`,
-    tags: ['Shopify', 'React', 'API Integration'],
+    tags: ['Shopify', 'Liquid', 'API Integration'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -181,7 +181,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://lenovopartsstore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Flenovopartsstore.com?w=800&h=600`,
-    tags: ['Next.js', 'Shopify API', 'React'],
+    tags: ['Shopify API', 'Liquid', 'JavaScript'],
     icon: <Monitor className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -192,7 +192,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://samsungpartsusa.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungpartsusa.com?w=800&h=600`,
-    tags: ['Shopify', 'React', 'JavaScript'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -203,7 +203,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://dacorpartstore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fdacorpartstore.com?w=800&h=600`,
-    tags: ['Shopify', 'Next.js', 'React'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -214,7 +214,7 @@ const PROJECTS = [
     role: 'Front-End Lead',
     url: 'https://partstore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fpartstore.com?w=800&h=600`,
-    tags: ['Shopify', 'React', 'JavaScript'],
+    tags: ['Shopify', 'Liquid', 'JavaScript'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: OEM_ACHIEVEMENTS
   },
@@ -402,7 +402,6 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto">
         <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
-          {/* Enhanced Tab Navigation Fix */}
           <div className="w-full">
             <div className="flex justify-start overflow-x-auto pb-6 scrollbar-hide touch-pan-x">
               <TabsList className="flex items-center gap-2 bg-secondary/30 p-2 rounded-[2rem] h-auto border-2 border-primary/5">
