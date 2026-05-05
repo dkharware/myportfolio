@@ -90,6 +90,22 @@ const PROJECTS = [
     ]
   },
   {
+    title: 'DeLonghi Spare Parts',
+    category: 'Appliance Parts',
+    description: 'Official DeLonghi spare parts and accessories platform. Engineered for precise component discovery and seamless purchasing workflows.',
+    role: 'Senior Frontend Developer',
+    url: 'https://www.delonghispareparts.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.delonghispareparts.com?w=800&h=600`,
+    tags: ['Headless', 'Performance', 'Next.js'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Developed a high-performance filtering system for complex coffee machine components',
+      'Integrated real-time stock availability across international warehouses',
+      'Optimized site speed and SEO for the global spare parts market',
+      'Architected a modular component system for easier brand scaling'
+    ]
+  },
+  {
     title: 'Elica Parts',
     category: 'Appliance Parts',
     description: 'Official parts and accessories store for Elica kitchen hoods and appliances. Focus on technical precision and installer support.',
