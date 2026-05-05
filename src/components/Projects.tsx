@@ -15,11 +15,9 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { 
   ExternalLink, 
   Globe, 
-  Stethoscope, 
   ShoppingBag, 
   Shirt, 
   Wrench, 
@@ -30,8 +28,9 @@ import {
   Cpu,
   Tv,
   Car,
-  Settings,
-  Truck
+  Truck,
+  Gift,
+  Zap
 } from 'lucide-react';
 
 const CATEGORIES = [
@@ -39,6 +38,7 @@ const CATEGORIES = [
   "Appliance Parts",
   "Automotive / B2B",
   "Electronics",
+  "Gifting / Bundling",
   "Blog",
   "Logistics",
   "Fashion"
@@ -48,17 +48,48 @@ const PROJECTS = [
   {
     title: 'Samsung Parts',
     category: 'Appliance Parts',
-    description: 'Flagship eCommerce platform for official Samsung replacement parts. Engineered high-performance part search and interactive exploded views.',
-    role: 'Senior Frontend Lead',
+    description: 'Front-End Lead building scalable Shopify-based platforms for US OEM brands. Developed custom themes and integrated Shopify APIs for parts management.',
+    role: 'Senior Front-End Lead',
     url: 'https://samsungparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungparts.com?w=800&h=600`,
     tags: ['Next.js', 'Shopify Storefront API', 'Exploded Views'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: [
-      'Architected interactive SVG-based "Exploded View" components for parts identification',
-      'Optimized search indexing for over 500,000 unique SKU combinations',
-      'Led the frontend transition to a headless architecture using Next.js 15',
-      'Improved mobile conversion rate by 35% through streamlined checkout UX'
+      'Architected interactive SVG-based "Exploded View" components for visual parts identification',
+      'Integrated Shopify APIs for complex product and collection management',
+      'Focused heavily on performance optimization and core web vitals',
+      'Led the frontend transition to a headless architecture using Next.js 15'
+    ]
+  },
+  {
+    title: 'Giftmix',
+    category: 'Gifting / Bundling',
+    description: 'Engineered a custom advanced bundle system allowing users to select multiple products and add them as a single order using Shopify Cart API.',
+    role: 'Senior Frontend Architect',
+    url: 'https://shopgiftmix.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fshopgiftmix.com?w=800&h=600`,
+    tags: ['Shopify Cart API', 'Vanilla JS', 'Bundling Logic'],
+    icon: <Gift className="h-6 w-6" />,
+    achievements: [
+      'Implemented a custom bundle system bypassing native Shopify limitations via Cart API',
+      'Handled complex product selection and variant mapping for multi-item requests',
+      'Architected high-performance validation logic to ensure bundle integrity',
+      'Optimized the checkout journey for bulk product additions'
+    ]
+  },
+  {
+    title: 'Samsung Parts USA',
+    category: 'Appliance Parts',
+    description: 'Strategic OEM platform for Samsung replacement parts. Focused on technical precision, interactive components, and team coordination.',
+    role: 'Front-End Lead',
+    url: 'https://samsungpartsusa.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungpartsusa.com?w=800&h=600`,
+    tags: ['Shopify', 'React', 'OEM'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Managed team coordination and ensured smooth delivery of critical features',
+      'Developed high-performance custom themes tailored for OEM specifications',
+      'Implemented interactive exploded views for visual component interaction'
     ]
   },
   {
@@ -68,76 +99,117 @@ const PROJECTS = [
     role: 'Senior Full Stack Developer',
     url: 'https://www.simcoauto.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.simcoauto.com?w=800&h=600`,
-    tags: ['PHP', 'CodeIgniter 3', 'MySQL', 'MVC', 'B2B'],
+    tags: ['PHP', 'CodeIgniter 3', 'MySQL', 'B2B'],
     icon: <Car className="h-6 w-6" />,
     achievements: [
-      'Architected a robust MVC structure using CodeIgniter 3 for enterprise-scale auto parts distribution',
+      'Architected a robust MVC structure using CodeIgniter 3 for enterprise distribution',
       'Developed secure B2B procurement modules for authorized dealership networks',
-      'Implemented real-time MySQL database optimization for high-density inventory queries',
-      'Engineered custom API endpoints for seamless third-party ERP integrations'
+      'Implemented real-time MySQL database optimization for inventory queries'
+    ]
+  },
+  {
+    title: 'Liebherr Pro Appliances',
+    category: 'Appliance Parts',
+    description: 'Premium OEM store for Liebherr professional series. High-fidelity implementation of parts discovery and technical diagrams.',
+    role: 'Front-End Lead',
+    url: 'https://liebherrproappliances.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fliebherrproappliances.com?w=800&h=600`,
+    tags: ['Shopify API', 'Interactive UI', 'Lead'],
+    icon: <Zap className="h-6 w-6" />,
+    achievements: [
+      'Architected scalable Shopify-based platforms for major OEM brands',
+      'Developed custom themes with integrated exploded view functionality',
+      'Coordinated technical feature delivery across frontend and backend'
     ]
   },
   {
     title: 'LG Parts',
     category: 'Appliance Parts',
-    description: 'Official LG parts distribution platform. Implemented robust filtering and real-time inventory synchronization.',
+    description: 'Front-End Lead building scalable Shopify platforms for official LG parts. Developed custom themes and interactive exploded views.',
     role: 'Lead Frontend Architect',
     url: 'https://lgparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Flgparts.com?w=800&h=600`,
     tags: ['React', 'API Integration', 'Scalable UI'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: [
-      'Developed a high-performance filtering engine for complex appliance models',
-      'Integrated real-time inventory tracking across multiple warehouses',
-      'Established a unified component library used across all OEM part stores',
-      'Achieved sub-second page loads for critical product detail pages'
+      'Developed SVG-based exploded views for visual parts identification',
+      'Optimized Core Web Vitals resulting in 30% faster load times',
+      'Established a unified component library for OEM scaling'
     ]
   },
   {
     title: 'Sony Parts',
     category: 'Electronics',
-    description: 'Comprehensive parts store for Sony consumer electronics. Focused on high-fidelity UI and seamless user journeys.',
-    role: 'Senior Frontend Developer',
+    description: 'Comprehensive parts store for Sony. Focused on high-fidelity UI, performance, and visual interaction via exploded diagrams.',
+    role: 'Senior Front-End Lead',
     url: 'https://sonyparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsonyparts.com?w=800&h=600`,
     tags: ['TypeScript', 'Tailwind', 'Next.js'],
     icon: <Tv className="h-6 w-6" />,
     achievements: [
-      'Implemented a pixel-perfect design system adhering to Sony brand guidelines',
-      'Optimized asset delivery for media-heavy parts catalogs',
-      'Developed custom data visualization tools for tech-support documentation',
-      'Integrated secure payment gateways with enterprise-level encryption'
+      'Architected the design system adhering to Sony brand guidelines',
+      'Implemented interactive product components for part identification',
+      'Managed team workflows to ensure smooth delivery of headless features'
+    ]
+  },
+  {
+    title: 'Dacor Part Store',
+    category: 'Appliance Parts',
+    description: 'OEM platform for Dacor luxury appliances. Engineered for technical precision and high-performance part lookup.',
+    role: 'Front-End Lead',
+    url: 'https://dacorpartstore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fdacorpartstore.com?w=800&h=600`,
+    tags: ['Luxury OEM', 'Shopify', 'Next.js'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Built a scalable Shopify Storefront architecture for luxury appliance owners',
+      'Integrated exploded view features for visual component interaction',
+      'Led performance tuning and mobile UX optimization'
+    ]
+  },
+  {
+    title: 'Original Repair Parts',
+    category: 'Appliance Parts',
+    description: 'High-scale OEM part store focused on user experience and technical precision in parts distribution.',
+    role: 'Front-End Lead',
+    url: 'https://originalrepairparts.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Foriginalrepairparts.com?w=800&h=600`,
+    tags: ['eCommerce', 'Performance', 'Shopify'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Architected custom themes for high-volume parts distribution',
+      'Integrated Shopify APIs for seamless collection and part management',
+      'Optimized frontend performance for large-scale SKU discovery'
     ]
   },
   {
     title: 'DeLonghi Spare Parts',
     category: 'Appliance Parts',
-    description: 'Official DeLonghi spare parts and accessories platform. Engineered for precise component discovery and seamless purchasing workflows.',
+    description: 'Official DeLonghi parts platform. Engineered for precise component discovery and visual part interaction.',
     role: 'Senior Frontend Developer',
     url: 'https://www.delonghispareparts.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.delonghispareparts.com?w=800&h=600`,
     tags: ['Headless', 'Performance', 'Next.js'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: [
-      'Developed a high-performance filtering system for complex coffee machine components',
-      'Integrated real-time stock availability across international warehouses',
-      'Optimized site speed and SEO for the global spare parts market',
+      'Developed high-performance filtering for complex coffee machine parts',
+      'Optimized site speed and SEO for global spare parts markets',
       'Architected a modular component system for easier brand scaling'
     ]
   },
   {
     title: 'Elica Parts',
     category: 'Appliance Parts',
-    description: 'Official parts and accessories store for Elica kitchen hoods and appliances. Focus on technical precision and installer support.',
+    description: 'Official store for Elica kitchen hoods. Focus on technical precision, interactive diagrams, and installer support.',
     role: 'Senior Frontend Developer',
     url: 'https://elicaparts.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Felicaparts.com?w=800&h=600`,
     tags: ['Headless', 'Performance', 'eCommerce'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: [
-      'Developed a streamlined parts discovery interface for specialized ventilation components',
-      'Integrated high-performance search across thousands of product manuals',
-      'Optimized mobile checkout experience for professional installers'
+      'Developed streamlined part discovery interfaces for ventilation components',
+      'Integrated high-performance search across thousands of manuals',
+      'Optimized mobile checkout for professional technical installers'
     ]
   },
   {
@@ -150,131 +222,24 @@ const PROJECTS = [
     tags: ['React', 'Custom UI', 'Luxury UX'],
     icon: <ShoppingBag className="h-6 w-6" />,
     achievements: [
-      'Engineered a dynamic 3D-style jewelry customizer for rings and necklaces',
-      'Implemented advanced attribute filtering for diamond and metal specifications',
-      'Developed a mobile-first, high-fidelity responsive layout for global reach',
-      'Optimized image loading for high-resolution jewelry photography'
-    ]
-  },
-  {
-    title: 'Bertazzoni Part Store',
-    category: 'Appliance Parts',
-    description: 'Specialized parts engine for luxury Italian appliance brand Bertazzoni. Focus on high-end UX.',
-    role: 'Senior Frontend Developer',
-    url: 'https://bertazzonipartstore.com/',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fbertazzonipartstore.com?w=800&h=600`,
-    tags: ['Headless', 'Luxury Brand', 'Vercel'],
-    icon: <Wrench className="h-6 w-6" />,
-    achievements: [
-      'Created a sophisticated, brand-aligned UI for elite appliance owners',
-      'Developed localized search features for the North American market',
-      'Integrated complex warranty tracking systems for premium products'
-    ]
-  },
-  {
-    title: 'Genuine Replacement Parts',
-    category: 'Appliance Parts',
-    description: 'Multi-brand appliance parts aggregator. Built for maximum performance and broad model compatibility.',
-    role: 'Frontend Architect',
-    url: 'https://genuinereplacementparts.com/',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fgenuinereplacementparts.com?w=800&h=600`,
-    tags: ['Performance', 'SEO', 'React'],
-    icon: <Wrench className="h-6 w-6" />,
-    achievements: [
-      'Optimized large-scale product catalogs for organic search performance',
-      'Implemented advanced caching layers to handle high-traffic search volume',
-      'Developed a cross-brand part compatibility checker tool'
-    ]
-  },
-  {
-    title: 'Liebherr Parts Store',
-    category: 'Appliance Parts',
-    description: 'Dedicated part ecosystem for Liebherr refrigeration solutions. Emphasis on technical accuracy.',
-    role: 'Senior Developer',
-    url: 'https://liebherrpartsstore.com/',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fliebherrpartsstore.com?w=800&h=600`,
-    tags: ['Technical UI', 'Next.js', 'B2B'],
-    icon: <Wrench className="h-6 w-6" />,
-    achievements: [
-      'Engineered a hierarchical part navigation system for industrial refrigeration',
-      'Developed interactive parts diagrams for onsite technician use',
-      'Integrated B2B procurement portals for authorized service centers'
-    ]
-  },
-  {
-    title: 'Lenovo Parts Store',
-    category: 'Electronics',
-    description: 'Official distribution channel for Lenovo laptop and desktop components. High SKU density management.',
-    role: 'Frontend Lead',
-    url: 'https://lenovopartsstore.com/',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Flenovopartsstore.com?w=800&h=600`,
-    tags: ['Electronics', 'Complex Filters', 'Scale'],
-    icon: <Cpu className="h-6 w-6" />,
-    achievements: [
-      'Architected a serial-number based part identification engine',
-      'Managed high-density technical data displays for computer hardware',
-      'Implemented ultra-fast fuzzy search for quick part discovery'
-    ]
-  },
-  {
-    title: 'Beko Part Store',
-    category: 'Appliance Parts',
-    description: 'European market leader parts platform. Optimized for global expansion and multi-lingual support.',
-    role: 'Senior Frontend Developer',
-    url: 'https://bekopartstore.com/',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fbekopartstore.com?w=800&h=600`,
-    tags: ['Global Scale', 'Liquid', 'Theme Design'],
-    icon: <Wrench className="h-6 w-6" />,
-    achievements: [
-      'Developed a scalable multi-region frontend architecture',
-      'Integrated localized currency and tax calculation engines',
-      'Ensured 100% WCAG accessibility compliance'
-    ]
-  },
-  {
-    title: 'Smeg Spare Parts',
-    category: 'Appliance Parts',
-    description: 'Design-centric parts store for Smeg appliances. Balancing aesthetic appeal with technical utility.',
-    role: 'Frontend UI Specialist',
-    url: 'https://smegspareparts.com/',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsmegspareparts.com?w=800&h=600`,
-    tags: ['Aesthetic UI', 'Motion', 'React'],
-    icon: <Wrench className="h-6 w-6" />,
-    achievements: [
-      'Implemented brand-accurate animations for a luxury Italian feel',
-      'Created custom iconography for technical appliance components',
-      'Optimized the mobile checkout flow for non-technical users'
-    ]
-  },
-  {
-    title: 'StoreDevGuide',
-    category: 'Blog',
-    description: 'Technical blogging platform for Headless Shopify developers. Perfect Lighthouse scores.',
-    role: 'Full Stack Architect',
-    url: 'https://storedevguide.com',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fstoredevguide.com?w=800&h=600`,
-    tags: ['Next.js', 'Headless', 'Vercel'],
-    icon: <Code className="h-6 w-6" />,
-    achievements: [
-      'Built a headless CMS layer on top of Shopify Storefront API',
-      'Achieved 100/100 Lighthouse performance and SEO scores',
-      'Implemented interactive code playgrounds and syntax highlighting'
+      'Engineered a dynamic jewelry customizer for rings and necklaces',
+      'Implemented advanced attribute filtering for diamond specifications',
+      'Optimized image loading for high-resolution luxury photography'
     ]
   },
   {
     title: 'Intercity Packers Movers',
     category: 'Logistics',
-    description: 'High-conversion WordPress platform for intercity logistics and relocation services. Optimized for local SEO and lead generation.',
-    role: 'Frontend & WordPress Developer',
+    description: 'High-conversion WordPress platform for intercity relocation. Optimized for local SEO and lead generation.',
+    role: 'Frontend Developer',
     url: 'https://www.intercitypackersmoversindore.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.intercitypackersmoversindore.com%2F?w=800&h=600`,
-    tags: ['WordPress', 'Elementor', 'Local SEO'],
+    tags: ['WordPress', 'Local SEO', 'Performance'],
     icon: <Truck className="h-6 w-6" />,
     achievements: [
-      'Architected a custom WordPress theme optimized for logistics service performance',
-      'Implemented advanced local SEO strategies achieving first-page search rankings',
-      'Engineered high-conversion lead capture workflows for relocation inquiries',
-      'Optimized mobile performance for service-on-the-go user scenarios'
+      'Architected custom theme optimized for logistics performance',
+      'Implemented local SEO strategies achieving first-page rankings',
+      'Engineered lead capture workflows for relocation inquiries'
     ]
   },
   {
@@ -287,9 +252,9 @@ const PROJECTS = [
     tags: ['Design System', 'Liquid', 'Premium UX'],
     icon: <Shirt className="h-6 w-6" />,
     achievements: [
-      'Translated complex high-fidelity Figma designs into pixel-perfect Liquid templates',
-      'Implemented advanced animation patterns for a luxury brand experience',
-      'Architected a modular component system for global regional launches'
+      'Translated complex Figma designs into pixel-perfect Liquid templates',
+      'Implemented advanced animation patterns for luxury branding',
+      'Architected modular component systems for regional launches'
     ]
   }
 ];
