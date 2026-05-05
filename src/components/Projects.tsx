@@ -402,18 +402,21 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
-          <div className="flex justify-start md:justify-center overflow-x-auto pb-4 scrollbar-hide">
-            <TabsList className="bg-secondary p-1.5 rounded-[1.5rem] h-auto border-2 border-primary/5">
-              {CATEGORIES.map((cat) => (
-                <TabsTrigger 
-                  key={cat} 
-                  value={cat}
-                  className="rounded-2xl px-6 py-3 text-sm font-bold data-[state=active]:bg-primary data-[state=active]:text-white transition-all whitespace-nowrap shadow-none border-none"
-                >
-                  {cat}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+          {/* Improved Tab Navigation for touch and overflow */}
+          <div className="w-full overflow-hidden">
+            <div className="flex justify-start md:justify-center overflow-x-auto pb-6 -mx-6 px-6 scrollbar-hide touch-pan-x">
+              <TabsList className="flex-nowrap bg-secondary/50 p-1.5 rounded-[1.5rem] h-auto border-2 border-primary/5 min-w-max">
+                {CATEGORIES.map((cat) => (
+                  <TabsTrigger 
+                    key={cat} 
+                    value={cat}
+                    className="rounded-2xl px-6 py-3.5 text-sm font-bold data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-xl data-[state=active]:shadow-primary/20 transition-all whitespace-nowrap border-none select-none"
+                  >
+                    {cat}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
           </div>
 
           <div className="relative">
