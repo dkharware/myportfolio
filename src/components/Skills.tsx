@@ -1,38 +1,38 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Code2, Monitor, Terminal, Zap, Palette, ShoppingBag } from 'lucide-react';
+import { Code2, Monitor, Terminal, Zap, Palette, ShoppingBag, Sparkles, Cpu } from 'lucide-react';
 
 const SKILL_CATEGORIES = [
   {
-    title: 'Core Technologies',
+    title: 'Master Tech Stack',
     icon: <Code2 className="h-6 w-6 text-primary" />,
-    skills: ['Next.js 15', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript (ES6+)', 'Node.js', 'Tailwind CSS'],
+    skills: ['Next.js 15', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript', 'HTML', 'CSS', 'Tailwind'],
   },
   {
-    title: 'eCommerce Mastery',
+    title: 'eCommerce Architecture',
     icon: <ShoppingBag className="h-6 w-6 text-primary" />,
-    skills: ['Liquid', 'Headless Shopify', 'Storefront API', 'Cart API Integration', 'Theme Architecture'],
+    skills: ['Liquid', 'Headless Shopify', 'Storefront API', 'Cart API', 'Theme Architecture'],
+  },
+  {
+    title: 'AI & Next-Gen Workflow',
+    icon: <Sparkles className="h-6 w-6 text-primary" />,
+    skills: ['GitHub Copilot', 'Cursor', 'Claude', 'AI Prompt Engineering'],
+  },
+  {
+    title: 'Strategic Tools',
+    icon: <Terminal className="h-6 w-6 text-primary" />,
+    skills: ['Git', 'GitHub', 'Monday.com', 'Agile', 'VSCode', 'Figma'],
   },
   {
     title: 'Engineering Leadership',
     icon: <Monitor className="h-6 w-6 text-primary" />,
-    skills: ['Agile / Scrum', 'Technical Mentoring', 'Code Reviews', 'System Design', 'Performance Auditing'],
+    skills: ['Technical Mentoring', 'Code Reviews', 'System Design', 'Team Management'],
   },
   {
-    title: 'Developer Experience',
-    icon: <Terminal className="h-6 w-6 text-primary" />,
-    skills: ['Git / CI/CD', 'GitHub Copilot', 'Cursor / AI Workflows', 'VS Code Power User', 'Vercel / AWS'],
-  },
-  {
-    title: 'Optimization Stack',
+    title: 'Performance & UX',
     icon: <Zap className="h-6 w-6 text-primary" />,
-    skills: ['Core Web Vitals', 'SSR / ISR', 'SEO Strategy', 'Lazy Loading', 'Bundle Optimization'],
-  },
-  {
-    title: 'Design & UX',
-    icon: <Palette className="h-6 w-6 text-primary" />,
-    skills: ['Figma to Code', 'High-Fidelity UI', 'Accessibility (a11y)', 'Animation Patterns', 'Micro-interactions'],
+    skills: ['Core Web Vitals', 'SSR / ISR', 'SEO Strategy', 'Accessibility (a11y)'],
   },
 ];
 
@@ -43,7 +43,7 @@ export function Skills() {
         <div className="text-center mb-20 space-y-6">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight">Technical <span className="text-primary">Mastery</span></h2>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg md:text-xl font-medium">
-            A battle-tested toolkit designed for building scalable, high-performance digital ecosystems.
+            A precision-tuned toolkit for architecting high-performance digital ecosystems and leading high-velocity engineering teams.
           </p>
         </div>
 
