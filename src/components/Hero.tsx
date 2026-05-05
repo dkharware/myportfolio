@@ -4,10 +4,11 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles, FileDown } from 'lucide-react';
 
 export function Hero() {
   const profileImg = PlaceHolderImages.find(img => img.id === 'profile-pic');
+  const RESUME_URL = "https://cdn.shopify.com/s/files/1/0688/0870/4151/files/deepak-resume-2026-updated.pdf?v=1777977422";
 
   return (
     <section id="about" className="relative min-h-[85vh] flex items-center pt-24 pb-12 md:pt-32 md:pb-20 px-8 md:px-12 overflow-hidden">
@@ -42,7 +43,12 @@ export function Hero() {
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
               <Button size="lg" asChild className="h-12 px-8 text-base gap-2 shadow-2xl shadow-primary/30 rounded-full hover:scale-105 transition-transform">
-                <a href="#projects">View Case Studies <ArrowRight className="h-4 w-4" /></a>
+                <a href="/projects">View Case Studies <ArrowRight className="h-4 w-4" /></a>
+              </Button>
+              <Button variant="outline" size="lg" asChild className="h-12 px-8 text-base gap-2 rounded-full border-2 hover:bg-primary hover:text-white transition-all">
+                <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+                  <FileDown className="h-4 w-4" /> Download Resume
+                </a>
               </Button>
               <div className="flex items-center gap-2">
                 <Button variant="outline" size="icon" asChild className="h-10 w-10 rounded-full hover:bg-primary hover:text-white transition-all border-2">

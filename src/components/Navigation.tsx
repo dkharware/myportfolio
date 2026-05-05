@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Menu, X, Code2 } from 'lucide-react';
+import { Menu, X, Code2, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { usePathname } from 'next/navigation';
@@ -11,6 +11,8 @@ export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
   const pathname = usePathname();
+
+  const RESUME_URL = "https://cdn.shopify.com/s/files/1/0688/0870/4151/files/deepak-resume-2026-updated.pdf?v=1777977422";
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +44,7 @@ export function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -57,6 +59,14 @@ export function Navigation() {
               {item.name}
             </Link>
           ))}
+          <Link 
+            href={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors flex items-center gap-1.5"
+          >
+            <FileText className="h-4 w-4" /> Resume
+          </Link>
           <Button asChild className="rounded-full px-8 font-black uppercase tracking-widest text-xs shadow-xl shadow-primary/20 h-11">
             <a href="mailto:dkharware@gmail.com">Hire Me</a>
           </Button>
@@ -86,6 +96,15 @@ export function Navigation() {
                 {item.name}
               </Link>
             ))}
+            <Link 
+              href={RESUME_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-black tracking-tight hover:text-primary transition-colors flex items-center gap-2"
+              onClick={() => setIsOpen(false)}
+            >
+              Resume <FileText className="h-6 w-6" />
+            </Link>
             <Button asChild className="mt-4 rounded-[1.25rem] h-14 text-lg font-black shadow-2xl shadow-primary/30">
               <a href="mailto:dkharware@gmail.com" onClick={() => setIsOpen(false)}>
                 Hire Me
