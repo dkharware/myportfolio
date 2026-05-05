@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { Menu, X, Code2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { usePathname } from 'next/navigation';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
+  const pathname = usePathname();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -19,9 +21,9 @@ export function Navigation() {
   }, []);
 
   const navItems = [
-    { name: 'Experience', href: '#experience' },
-    { name: 'Mastery', href: '#skills' },
-    { name: 'Portfolio', href: '#projects' },
+    { name: 'Experience', href: '/#experience' },
+    { name: 'Mastery', href: '/#skills' },
+    { name: 'Portfolio', href: '/projects' },
   ];
 
   return (
@@ -45,7 +47,12 @@ export function Navigation() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
+              className={cn(
+                "text-sm font-black uppercase tracking-widest transition-colors",
+                pathname === item.href || (pathname === '/' && item.href.startsWith('/#'))
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-primary"
+              )}
             >
               {item.name}
             </Link>

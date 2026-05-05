@@ -4,6 +4,9 @@ import { Experience } from '@/components/Experience';
 import { Skills } from '@/components/Skills';
 import { Projects } from '@/components/Projects';
 import { Footer } from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -13,7 +16,25 @@ export default function Home() {
         <Hero />
         <Experience />
         <Skills />
-        <Projects />
+        
+        {/* Projects Preview Section */}
+        <section id="projects-preview" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-6xl font-black tracking-tight">Featured <span className="text-primary">Works</span></h2>
+                <p className="text-muted-foreground max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
+                  A selection of high-impact engineering projects. Explore the full catalog for more technical depth.
+                </p>
+              </div>
+              <Button asChild variant="outline" size="lg" className="rounded-2xl h-14 px-8 text-lg font-bold border-2 gap-2 hover:bg-primary hover:text-white transition-all">
+                <Link href="/projects">View All Projects <ArrowRight className="h-5 w-5" /></Link>
+              </Button>
+            </div>
+            
+            <Projects limit={3} />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

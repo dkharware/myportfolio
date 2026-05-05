@@ -19,7 +19,7 @@ import {
   ExternalLink, 
   Globe, 
   Stethoscope, 
-  Utensils, 
+  ShoppingBag, 
   Shirt, 
   Wrench, 
   Code, 
@@ -34,11 +34,26 @@ const CATEGORIES = [
   "Medical",
   "Blog",
   "Travel",
-  "Food",
   "Fashion"
 ];
 
 const PROJECTS = [
+  {
+    title: 'Jewelebrate',
+    category: 'Fashion',
+    description: 'Developed custom interactive features and a high-performance UI for a premium jewelry marketplace. Focused on luxury user experience and complex attribute management.',
+    role: 'Senior Frontend Developer',
+    url: 'https://jewelebrate.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fjewelebrate.com?w=800&h=600`,
+    tags: ['React', 'Custom Features', 'Luxury UI'],
+    icon: <ShoppingBag className="h-6 w-6" />,
+    achievements: [
+      'Engineered custom product customization engines for luxury jewelry',
+      'Designed and implemented a mobile-first, high-fidelity UI layout',
+      'Integrated advanced filtering systems for complex jewelry attributes',
+      'Optimized site speed and conversion rates for high-ticket item checkout'
+    ]
+  },
   {
     title: 'Encompass eCommerce',
     category: 'Appliance Parts',
@@ -88,22 +103,6 @@ const PROJECTS = [
     ]
   },
   {
-    title: 'Protein Country Bundle',
-    category: 'Food',
-    description: 'Custom complex bundling engine utilizing Shopify Cart API. Streamlines the purchasing flow for nutrition products.',
-    role: 'Lead Frontend Engineer',
-    url: 'https://proteincountry.com',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fproteincountry.com?w=800&h=600`,
-    tags: ['Cart API', 'Complex Logic', 'React'],
-    icon: <Utensils className="h-6 w-6" />,
-    achievements: [
-      'Developed a multi-product bundling logic bypass for standard Cart API',
-      'Implemented real-time inventory validation for bundled items',
-      'Created a fluid, mobile-first selection interface for bundle customization',
-      'Optimized bundle checkout flow, increasing conversion rates by 15%'
-    ]
-  },
-  {
     title: 'Marimekko Global',
     category: 'Fashion',
     description: 'Global fashion marketplace for a Finnish premium brand. Focus on high-fidelity design implementation and fluid motion.',
@@ -125,7 +124,7 @@ const PROJECTS = [
     description: 'B2B healthcare equipment platform. Engineered for strict procurement compliance and robust inventory handling.',
     role: 'Frontend Architect',
     url: '#',
-    image: PlaceHolderImages.find(img => img.id === 'project-medical')?.imageUrl || '',
+    image: PlaceHolderImages.find(img => img.id === 'project-medical')?.imageUrl || 'https://picsum.photos/seed/medical/800/600',
     tags: ['B2B', 'Security', 'Enterprise'],
     icon: <Stethoscope className="h-6 w-6" />,
     achievements: [
@@ -137,25 +136,18 @@ const PROJECTS = [
   },
 ];
 
-export function Projects() {
+export function Projects({ limit }: { limit?: number }) {
   const [activeTab, setActiveTab] = React.useState("All");
 
   const filteredProjects = activeTab === "All" 
     ? PROJECTS 
     : PROJECTS.filter(p => p.category === activeTab);
 
-  return (
-    <section id="projects" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tight">Technical <span className="text-primary">Portfolio</span></h2>
-            <p className="text-muted-foreground max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
-              Strategic eCommerce solutions and high-performance applications architected for global scale.
-            </p>
-          </div>
-        </div>
+  const displayedProjects = limit ? filteredProjects.slice(0, limit) : filteredProjects;
 
+  return (
+    <section id="projects" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
         <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
           <div className="flex justify-start md:justify-center overflow-x-auto pb-4">
             <TabsList className="bg-secondary p-1.5 rounded-[1.5rem] h-auto border-2 border-primary/5">
@@ -172,7 +164,7 @@ export function Projects() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
-            {filteredProjects.map((project, idx) => (
+            {displayedProjects.map((project, idx) => (
               <Card key={`${activeTab}-${idx}`} className="group overflow-hidden border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-700 rounded-[2.5rem] bg-white flex flex-col h-full animate-in fade-in slide-in-from-bottom-8">
                 <div className="relative aspect-[16/10] overflow-hidden m-4 rounded-[1.75rem]">
                   <Image
@@ -250,9 +242,7 @@ export function Projects() {
                         </div>
 
                         <div className="space-y-4">
-                          <h4 className="text-xl font-black flex items-center gap-2">
-                             Summary
-                          </h4>
+                          <h4 className="text-xl font-black">Summary</h4>
                           <p className="text-muted-foreground text-lg leading-relaxed">
                             {project.description}
                           </p>
