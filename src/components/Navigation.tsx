@@ -21,8 +21,7 @@ export function Navigation() {
   const navItems = [
     { name: 'Experience', href: '#experience' },
     { name: 'Mastery', href: '#skills' },
-    { name: 'Case Studies', href: '#projects' },
-    { name: 'Connect', href: '#contact' },
+    { name: 'Portfolio', href: '#projects' },
   ];
 
   return (
@@ -52,7 +51,7 @@ export function Navigation() {
             </Link>
           ))}
           <Button asChild className="rounded-full px-8 font-black uppercase tracking-widest text-xs shadow-xl shadow-primary/20 h-11">
-            <Link href="#contact">Hire Me</Link>
+            <a href="mailto:dkharware@gmail.com">Hire Me</a>
           </Button>
         </div>
 
@@ -81,9 +80,9 @@ export function Navigation() {
               </Link>
             ))}
             <Button asChild className="mt-4 rounded-[1.25rem] h-14 text-lg font-black shadow-2xl shadow-primary/30">
-              <Link href="#contact" onClick={() => setIsOpen(false)}>
+              <a href="mailto:dkharware@gmail.com" onClick={() => setIsOpen(false)}>
                 Hire Me
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
