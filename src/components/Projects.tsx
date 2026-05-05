@@ -288,10 +288,7 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
     ? PROJECTS 
     : PROJECTS.filter(p => p.category === activeTab);
 
-  // If slider, we might want to show more than just 3
-  const displayedProjects = isSlider && activeTab === "All" ? PROJECTS : filteredProjects;
-
-  const ProjectCard = ({ project, idx }: { project: typeof PROJECTS[0], idx: number }) => (
+  const ProjectCard = ({ project }: { project: typeof PROJECTS[0] }) => (
     <Card className="group overflow-hidden border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-700 rounded-[2.5rem] bg-white flex flex-col h-full">
       <div className="relative aspect-[16/10] overflow-hidden m-4 rounded-[1.75rem]">
         <Image
@@ -420,12 +417,12 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
           </div>
 
           <div className="relative">
-            {isSlider && activeTab === "All" ? (
+            {isSlider ? (
               <Carousel className="w-full" opts={{ align: "start", loop: true }}>
                 <CarouselContent className="-ml-6">
-                  {displayedProjects.map((project, idx) => (
-                    <CarouselItem key={`slider-${idx}`} className="pl-6 md:basis-1/2 lg:basis-1/3">
-                      <ProjectCard project={project} idx={idx} />
+                  {filteredProjects.map((project, idx) => (
+                    <CarouselItem key={`${activeTab}-${idx}`} className="pl-6 md:basis-1/2 lg:basis-1/3">
+                      <ProjectCard project={project} />
                     </CarouselItem>
                   ))}
                 </CarouselContent>
@@ -436,16 +433,15 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
               </Carousel>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
-                {displayedProjects.map((project, idx) => (
+                {filteredProjects.map((project, idx) => (
                   <div key={`${activeTab}-${idx}`} className="animate-in fade-in slide-in-from-bottom-8">
-                    <ProjectCard project={project} idx={idx} />
+                    <ProjectCard project={project} />
                   </div>
                 ))}
               </div>
             )}
           </div>
 
-          {/* View All Button - Only on 'All' tab */}
           {activeTab === "All" && (
             <div className="flex justify-center pt-12">
               <Button asChild variant="outline" size="lg" className="rounded-2xl h-14 px-10 text-lg font-black border-2 gap-3 hover:bg-primary hover:text-white transition-all shadow-xl shadow-primary/5">
