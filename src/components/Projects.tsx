@@ -90,6 +90,21 @@ const PROJECTS = [
     ]
   },
   {
+    title: 'Elica Parts',
+    category: 'Appliance Parts',
+    description: 'Official parts and accessories store for Elica kitchen hoods and appliances. Focus on technical precision and installer support.',
+    role: 'Senior Frontend Developer',
+    url: 'https://elicaparts.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Felicaparts.com?w=800&h=600`,
+    tags: ['Headless', 'Performance', 'eCommerce'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Developed a streamlined parts discovery interface for specialized ventilation components',
+      'Integrated high-performance search across thousands of product manuals',
+      'Optimized mobile checkout experience for professional installers'
+    ]
+  },
+  {
     title: 'Jewelebrate',
     category: 'Fashion',
     description: 'Premium jewelry marketplace. Developed custom product customizers and high-end interactive UI features.',
