@@ -39,7 +39,6 @@ const CATEGORIES = [
   "Appliance Parts",
   "Automotive / B2B",
   "Electronics",
-  "Medical",
   "Blog",
   "Logistics",
   "Fashion"
@@ -291,21 +290,6 @@ const PROJECTS = [
       'Translated complex high-fidelity Figma designs into pixel-perfect Liquid templates',
       'Implemented advanced animation patterns for a luxury brand experience',
       'Architected a modular component system for global regional launches'
-    ]
-  },
-  {
-    title: 'Med-Tech Supply',
-    category: 'Medical',
-    description: 'B2B healthcare equipment platform. Engineered for strict procurement workflows.',
-    role: 'Senior Architect',
-    url: '#',
-    image: PlaceHolderImages.find(img => img.id === 'project-medical')?.imageUrl || 'https://picsum.photos/seed/medical/800/600',
-    tags: ['B2B', 'Enterprise', 'HIPAA'],
-    icon: <Stethoscope className="h-6 w-6" />,
-    achievements: [
-      'Designed a secure procurement portal for institutional healthcare orders',
-      'Implemented complex role-based access for buyer approval workflows',
-      'Optimized bulk-ordering tools for enterprise inventory management'
     ]
   }
 ];

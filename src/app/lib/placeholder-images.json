@@ -48,12 +48,6 @@
       "description": "Marimekko Global Fashion eCommerce",
       "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fmarimekko.com?w=800&h=600",
       "imageHint": "fashion store"
-    },
-    {
-      "id": "project-medical",
-      "description": "Med-Tech Supply - Healthcare eCommerce",
-      "imageUrl": "https://picsum.photos/seed/medical-portal/800/600",
-      "imageHint": "medical equipment"
     }
   ]
 }
