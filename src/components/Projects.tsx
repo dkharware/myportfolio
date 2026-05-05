@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -6,9 +5,9 @@ import Image from 'next/image';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { ExternalLink, ShoppingCart, Layout, Globe, Stethoscope, Utensils, Shirt, Wrench } from 'lucide-react';
+import { ExternalLink, Globe, Stethoscope, Utensils, Shirt, Wrench, Code } from 'lucide-react';
 
 const CATEGORIES = [
   "All",
@@ -24,56 +23,56 @@ const PROJECTS = [
   {
     title: 'Encompass eCommerce',
     category: 'Appliance Parts',
-    description: 'Lead for 20+ Sites including samsungparts.com. Custom themes with interactive exploded view components.',
-    image: PlaceHolderImages.find(img => img.id === 'project-encompass'),
-    tags: ['Next.js', 'React', 'Shopify API'],
-    liveUrl: 'https://samsungparts.com',
-    icon: <Wrench className="h-5 w-5" />,
-  },
-  {
-    title: 'Med-Tech Supply',
-    category: 'Medical',
-    description: 'Specialized healthcare equipment marketplace. Optimized for B2B procurement and medical standard compliance.',
-    image: PlaceHolderImages.find(img => img.id === 'project-medical'),
-    tags: ['React', 'Next.js', 'Tailwind'],
-    liveUrl: '#',
-    icon: <Stethoscope className="h-5 w-5" />,
+    description: 'Lead engineer for 20+ flagship eCommerce sites including samsungparts.com. Architected custom interactive exploded view components.',
+    url: 'https://samsungparts.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungparts.com?w=800&h=600`,
+    tags: ['Next.js', 'Shopify Storefront API', 'Performance'],
+    icon: <Wrench className="h-6 w-6" />,
   },
   {
     title: 'StoreDevGuide',
     category: 'Blog',
-    description: 'Developer blogging platform using Headless architecture. Decoupled frontend for high performance.',
-    image: PlaceHolderImages.find(img => img.id === 'project-storedev'),
-    tags: ['Next.js', 'Headless Shopify', 'SSR'],
-    liveUrl: 'https://storedevguide.com',
-    icon: <Layout className="h-5 w-5" />,
+    description: 'Dev-centric blogging platform built with Headless Shopify. Features server-side rendering for optimal SEO and performance.',
+    url: 'https://storedevguide.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fstoredevguide.com?w=800&h=600`,
+    tags: ['Headless', 'SSR', 'Vercel'],
+    icon: <Code className="h-6 w-6" />,
   },
   {
     title: 'Al Khaleej Tours',
     category: 'Travel',
-    description: 'Responsive booking platform with dynamic UI for tour listings. Integrated real-time data fetching.',
-    image: PlaceHolderImages.find(img => img.id === 'project-alkhaleej'),
-    tags: ['JS ES6', 'AJAX', 'UX Design'],
-    liveUrl: 'https://alkhaleejtours.org',
-    icon: <Globe className="h-5 w-5" />,
+    description: 'High-performance booking engine for premium travel tours. Real-time data integration with asynchronous state management.',
+    url: 'https://alkhaleejtours.org',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Falkhaleejtours.org?w=800&h=600`,
+    tags: ['JS ES6+', 'UX Design', 'API-First'],
+    icon: <Globe className="h-6 w-6" />,
   },
   {
     title: 'Protein Country Bundle',
     category: 'Food',
-    description: 'Custom bundle add-to-cart engine using Shopify Cart API. Simplifies complex nutrition product selections.',
-    image: PlaceHolderImages.find(img => img.id === 'project-bundle'),
-    tags: ['JavaScript', 'Cart API', 'Food Tech'],
-    liveUrl: 'https://proteincountry.com',
-    icon: <Utensils className="h-5 w-5" />,
+    description: 'Custom complex bundling engine utilizing Shopify Cart API. Streamlines the purchasing flow for nutrition products.',
+    url: 'https://proteincountry.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fproteincountry.com?w=800&h=600`,
+    tags: ['Cart API', 'Complex Logic', 'React'],
+    icon: <Utensils className="h-6 w-6" />,
   },
   {
     title: 'Marimekko Global',
     category: 'Fashion',
-    description: 'Global fashion eCommerce for premium Finnish brand. Focused on high-fidelity UI and seamless checkout.',
-    image: PlaceHolderImages.find(img => img.id === 'project-marimekko'),
-    tags: ['Shopify', 'Liquid', 'eCommerce'],
-    liveUrl: 'https://marimekko.com',
-    icon: <Shirt className="h-5 w-5" />,
+    description: 'Global fashion marketplace for a Finnish premium brand. Focus on high-fidelity design implementation and fluid motion.',
+    url: 'https://marimekko.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fmarimekko.com?w=800&h=600`,
+    tags: ['Liquid', 'Motion', 'Global Scale'],
+    icon: <Shirt className="h-6 w-6" />,
+  },
+  {
+    title: 'Med-Tech Supply',
+    category: 'Medical',
+    description: 'B2B healthcare equipment platform. Engineered for strict procurement compliance and robust inventory handling.',
+    url: '#',
+    image: PlaceHolderImages.find(img => img.id === 'project-medical')?.imageUrl || '',
+    tags: ['B2B', 'Security', 'Enterprise'],
+    icon: <Stethoscope className="h-6 w-6" />,
   },
 ];
 
@@ -85,25 +84,25 @@ export function Projects() {
     : PROJECTS.filter(p => p.category === activeTab);
 
   return (
-    <section id="projects" className="py-20 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold">Featured <span className="text-primary">Impact</span></h2>
-            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
-              Scalable ecosystems built across diverse industries, from high-performance appliance parts to global fashion stores.
+    <section id="projects" className="section-padding bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
+          <div className="space-y-6">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight">Case <span className="text-primary">Studies</span></h2>
+            <p className="text-muted-foreground max-w-2xl text-lg md:text-xl font-medium leading-relaxed">
+              Engineered solutions across specialized industries, focused on scalability and conversion.
             </p>
           </div>
         </div>
 
-        <Tabs defaultValue="All" className="space-y-10" onValueChange={setActiveTab}>
-          <div className="flex justify-start md:justify-center overflow-x-auto pb-4 -mx-6 px-6">
-            <TabsList className="bg-muted/50 p-1 rounded-2xl h-auto">
+        <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
+          <div className="flex justify-start md:justify-center overflow-x-auto pb-4">
+            <TabsList className="bg-secondary p-1.5 rounded-[1.5rem] h-auto border-2 border-primary/5">
               {CATEGORIES.map((cat) => (
                 <TabsTrigger 
                   key={cat} 
                   value={cat}
-                  className="rounded-xl px-4 py-2 data-[state=active]:bg-primary data-[state=active]:text-white transition-all whitespace-nowrap"
+                  className="rounded-2xl px-6 py-3 text-sm font-bold data-[state=active]:bg-primary data-[state=active]:text-white transition-all whitespace-nowrap shadow-none border-none"
                 >
                   {cat}
                 </TabsTrigger>
@@ -111,56 +110,46 @@ export function Projects() {
             </TabsList>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
             {filteredProjects.map((project, idx) => (
-              <Card key={`${activeTab}-${idx}`} className="overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 group flex flex-col h-full bg-white animate-in fade-in slide-in-from-bottom-4">
-                <div className="relative aspect-video overflow-hidden">
-                  {project.image && (
-                    <Image
-                      src={project.image.imageUrl}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
-                      data-ai-hint={project.image.imageHint}
-                    />
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 md:p-6">
-                    <Button variant="secondary" size="sm" asChild className="rounded-full shadow-lg">
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"><ExternalLink className="h-4 w-4 mr-2" /> Visit Site</a>
+              <Card key={`${activeTab}-${idx}`} className="group overflow-hidden border-none shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.1)] transition-all duration-700 rounded-[2.5rem] bg-white flex flex-col h-full animate-in fade-in slide-in-from-bottom-8">
+                <div className="relative aspect-[16/10] overflow-hidden m-4 rounded-[1.75rem]">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-1000 ease-out"
+                    data-ai-hint="website screenshot"
+                  />
+                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                    <Button variant="secondary" size="lg" asChild className="rounded-full shadow-2xl scale-90 group-hover:scale-100 transition-transform font-bold">
+                      <a href={project.url} target="_blank" rel="noopener noreferrer"><ExternalLink className="h-5 w-5 mr-2" /> Explore Solution</a>
                     </Button>
                   </div>
-                  <Badge className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-primary border-none shadow-sm">
-                    {project.category}
-                  </Badge>
                 </div>
-                <CardContent className="p-5 md:p-6 space-y-4 flex-grow">
-                  <div className="flex items-center gap-3 text-primary">
-                    <div className="p-2 bg-primary/10 rounded-lg">
+                
+                <CardContent className="p-8 space-y-5 flex-grow">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-primary/5 rounded-[1.25rem] group-hover:bg-primary group-hover:text-white transition-colors duration-500 shadow-sm">
                       {project.icon}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">{project.title}</h3>
+                    <h3 className="text-2xl font-black text-foreground">{project.title}</h3>
                   </div>
-                  <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-base font-medium leading-relaxed">
                     {project.description}
                   </p>
                 </CardContent>
-                <CardFooter className="px-5 md:px-6 pb-6 md:pb-8 pt-0 mt-auto">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map(tag => (
-                      <Badge key={tag} variant="outline" className="text-[9px] md:text-[10px] tracking-wider uppercase font-bold py-1 bg-muted/20">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
+
+                <CardFooter className="px-8 pb-10 flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <Badge key={tag} variant="secondary" className="px-4 py-1.5 text-[10px] font-black tracking-widest uppercase bg-secondary/80 text-foreground/70 rounded-full border-none">
+                      {tag}
+                    </Badge>
+                  ))}
                 </CardFooter>
               </Card>
             ))}
           </div>
-          {filteredProjects.length === 0 && (
-            <div className="text-center py-20 bg-muted/20 rounded-3xl border-2 border-dashed">
-              <p className="text-muted-foreground">No projects found in this category yet.</p>
-            </div>
-          )}
         </Tabs>
       </div>
     </section>

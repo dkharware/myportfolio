@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -13,75 +12,75 @@ export function Navigation() {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Mastery', href: '#skills' },
+    { name: 'Case Studies', href: '#projects' },
+    { name: 'Connect', href: '#contact' },
   ];
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4',
-        scrolled ? 'bg-background/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-6',
+        scrolled ? 'bg-white/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] py-4' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-primary p-2 rounded-lg group-hover:rotate-6 transition-transform">
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="bg-primary p-2.5 rounded-[0.875rem] shadow-lg shadow-primary/20 group-hover:rotate-12 transition-transform duration-500">
             <Code2 className="text-primary-foreground h-6 w-6" />
           </div>
-          <span className="text-xl font-bold tracking-tight">Deepak Kharware</span>
+          <span className="text-2xl font-black tracking-tighter">DEEPAK.</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
+              className="text-sm font-black uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
             >
               {item.name}
             </Link>
           ))}
-          <Button asChild>
+          <Button asChild className="rounded-full px-8 font-black uppercase tracking-widest text-xs shadow-xl shadow-primary/20 h-11">
             <Link href="#contact">Hire Me</Link>
           </Button>
         </div>
 
         {/* Mobile Nav Toggle */}
         <button
-          className="md:hidden p-2 hover:bg-accent rounded-md"
+          className="md:hidden p-3 hover:bg-secondary rounded-2xl transition-colors"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
         >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {isOpen ? <X className="h-6 w-6 text-primary" /> : <Menu className="h-6 w-6 text-primary" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background border-t p-6 shadow-xl animate-in slide-in-from-top-4 duration-300">
-          <div className="flex flex-col gap-4">
+        <div className="md:hidden absolute top-full left-6 right-6 mt-4 bg-white rounded-[2rem] p-8 shadow-2xl border border-primary/5 animate-in slide-in-from-top-8 duration-500">
+          <div className="flex flex-col gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-lg font-medium py-2 border-b border-border/50"
+                className="text-2xl font-black tracking-tight hover:text-primary transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="mt-2">
+            <Button asChild className="mt-4 rounded-[1.25rem] h-14 text-lg font-black shadow-2xl shadow-primary/30">
               <Link href="#contact" onClick={() => setIsOpen(false)}>
                 Hire Me
               </Link>

@@ -1,65 +1,65 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Code2, Monitor, Server, Smartphone, Zap, Palette, ShoppingBag, Terminal } from 'lucide-react';
+import { Code2, Monitor, Terminal, Zap, Palette, ShoppingBag } from 'lucide-react';
 
 const SKILL_CATEGORIES = [
   {
-    title: 'Tech Stack',
+    title: 'Core Technologies',
     icon: <Code2 className="h-6 w-6 text-primary" />,
-    skills: ['Next.js', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS'],
+    skills: ['Next.js 15', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript (ES6+)', 'Node.js', 'Tailwind CSS'],
   },
   {
-    title: 'Shopify Ecosystem',
+    title: 'eCommerce Mastery',
     icon: <ShoppingBag className="h-6 w-6 text-primary" />,
-    skills: ['Liquid', 'Headless Shopify', 'Storefront API', 'Custom Theme Dev', 'Shopify Cart API'],
+    skills: ['Liquid', 'Headless Shopify', 'Storefront API', 'Cart API Integration', 'Theme Architecture'],
   },
   {
-    title: 'Tools & AI',
-    icon: <Terminal className="h-6 w-6 text-primary" />,
-    skills: ['Git', 'GitHub', 'GitHub Copilot', 'Cursor', 'Claude', 'VSCode', 'Framer Motion'],
-  },
-  {
-    title: 'Leadership',
+    title: 'Engineering Leadership',
     icon: <Monitor className="h-6 w-6 text-primary" />,
-    skills: ['Team Leading', 'Code Reviews', 'Agile/Scrum', 'Mentoring', 'Performance Optimization'],
+    skills: ['Agile / Scrum', 'Technical Mentoring', 'Code Reviews', 'System Design', 'Performance Auditing'],
   },
   {
-    title: 'Optimization',
+    title: 'Developer Experience',
+    icon: <Terminal className="h-6 w-6 text-primary" />,
+    skills: ['Git / CI/CD', 'GitHub Copilot', 'Cursor / AI Workflows', 'VS Code Power User', 'Vercel / AWS'],
+  },
+  {
+    title: 'Optimization Stack',
     icon: <Zap className="h-6 w-6 text-primary" />,
-    skills: ['SSR & SSG', 'SEO Optimization', 'Web Vitals', 'Lazy Loading', 'Asset Delivery'],
+    skills: ['Core Web Vitals', 'SSR / ISR', 'SEO Strategy', 'Lazy Loading', 'Bundle Optimization'],
   },
   {
-    title: 'Design & Workflow',
+    title: 'Design & UX',
     icon: <Palette className="h-6 w-6 text-primary" />,
-    skills: ['Figma', 'UI/UX Implementation', 'Monday.com', 'Cross-Browser Compatibility'],
+    skills: ['Figma to Code', 'High-Fidelity UI', 'Accessibility (a11y)', 'Animation Patterns', 'Micro-interactions'],
   },
 ];
 
 export function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 md:mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold">Technical <span className="text-primary">Mastery</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg">
-            A comprehensive toolkit focused on creating scalable, high-performance eCommerce and web solutions.
+    <section id="skills" className="section-padding bg-secondary/30 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20 space-y-6">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight">Technical <span className="text-primary">Mastery</span></h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg md:text-xl font-medium">
+            A battle-tested toolkit designed for building scalable, high-performance digital ecosystems.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {SKILL_CATEGORIES.map((category, idx) => (
-            <Card key={idx} className="bg-white hover:shadow-xl transition-all border-none group">
-              <CardContent className="p-6 md:p-8 space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="p-3 bg-primary/5 rounded-xl group-hover:bg-primary group-hover:text-white transition-colors duration-300 shrink-0">
+            <Card key={idx} className="bg-white border-2 border-transparent hover:border-primary/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] transition-all duration-500 rounded-[2rem] group overflow-hidden">
+              <CardContent className="p-8 md:p-10 space-y-8">
+                <div className="flex items-center gap-5">
+                  <div className="p-4 bg-primary/5 rounded-[1.25rem] group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
                     {category.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold">{category.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-black">{category.title}</h3>
                 </div>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {category.skills.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="px-3 py-1 text-[10px] md:text-xs font-medium bg-muted/50 hover:bg-primary hover:text-white transition-all cursor-default">
+                    <Badge key={skill} variant="secondary" className="px-4 py-2 text-xs md:text-sm font-bold bg-secondary/50 text-foreground/80 hover:bg-primary hover:text-white transition-all duration-300 rounded-xl cursor-default border-none">
                       {skill}
                     </Badge>
                   ))}
