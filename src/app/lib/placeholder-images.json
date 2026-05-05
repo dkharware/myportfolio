@@ -15,31 +15,31 @@
     {
       "id": "project-encompass",
       "description": "Encompass eCommerce - Samsung/Sony Parts",
-      "imageUrl": "https://picsum.photos/seed/encompass-supply/800/600",
-      "imageHint": "ecommerce interface"
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungparts.com?w=800&h=600",
+      "imageHint": "ecommerce site"
     },
     {
       "id": "project-storedev",
       "description": "StoreDevGuide - Headless Shopify Blog",
-      "imageUrl": "https://picsum.photos/seed/storedev-guide/800/600",
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fstoredevguide.com?w=800&h=600",
       "imageHint": "coding blog"
     },
     {
       "id": "project-bundle",
       "description": "Protein Country - Bundle Food System",
-      "imageUrl": "https://picsum.photos/seed/protein-food/800/600",
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fproteincountry.com?w=800&h=600",
       "imageHint": "health food"
     },
     {
       "id": "project-alkhaleej",
       "description": "Al Khaleej Tours Booking Platform",
-      "imageUrl": "https://picsum.photos/seed/tours-booking/800/600",
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Falkhaleejtours.org?w=800&h=600",
       "imageHint": "travel booking"
     },
     {
       "id": "project-marimekko",
       "description": "Marimekko Global Fashion eCommerce",
-      "imageUrl": "https://picsum.photos/seed/fashion-marimekko/800/600",
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fmarimekko.com?w=800&h=600",
       "imageHint": "fashion store"
     },
     {
