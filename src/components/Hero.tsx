@@ -60,7 +60,7 @@ export function Hero() {
 
           <div className="relative fade-in order-1 lg:order-2 flex justify-center lg:justify-end" style={{ animationDelay: '0.2s' }}>
             <div className="absolute -inset-10 bg-primary/10 rounded-full blur-[80px] -z-10"></div>
-            <div className="relative aspect-[4/5] w-full max-w-[320px] md:max-w-[380px] bg-white p-3 rounded-[2rem] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.12)] overflow-hidden border border-white/80">
+            <div className="relative aspect-[8/7] w-full max-w-[480px] bg-white p-3 rounded-[2rem] shadow-[0_24px_48px_-12px_rgba(0,0,0,0.12)] overflow-hidden border border-white/80">
               {profileImg && (
                 <Image
                   src={profileImg.imageUrl}
