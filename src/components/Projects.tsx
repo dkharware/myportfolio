@@ -27,12 +27,15 @@ import {
   Briefcase, 
   Layers,
   Cpu,
-  Tv
+  Tv,
+  Car,
+  Settings
 } from 'lucide-react';
 
 const CATEGORIES = [
   "All",
   "Appliance Parts",
+  "Automotive / B2B",
   "Electronics",
   "Medical",
   "Blog",
@@ -55,6 +58,22 @@ const PROJECTS = [
       'Optimized search indexing for over 500,000 unique SKU combinations',
       'Led the frontend transition to a headless architecture using Next.js 15',
       'Improved mobile conversion rate by 35% through streamlined checkout UX'
+    ]
+  },
+  {
+    title: 'Simco Auto',
+    category: 'Automotive / B2B',
+    description: 'Full-stack B2B automotive parts distribution platform. Engineered secure procurement workflows and high-performance inventory management.',
+    role: 'Senior Full Stack Developer',
+    url: 'https://www.simcoauto.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.simcoauto.com?w=800&h=600`,
+    tags: ['PHP', 'CodeIgniter 3', 'MySQL', 'MVC', 'B2B'],
+    icon: <Car className="h-6 w-6" />,
+    achievements: [
+      'Architected a robust MVC structure using CodeIgniter 3 for enterprise-scale auto parts distribution',
+      'Developed secure B2B procurement modules for authorized dealership networks',
+      'Implemented real-time MySQL database optimization for high-density inventory queries',
+      'Engineered custom API endpoints for seamless third-party ERP integrations'
     ]
   },
   {

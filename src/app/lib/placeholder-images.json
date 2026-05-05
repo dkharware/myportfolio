@@ -1,4 +1,3 @@
-
 {
   "placeholderImages": [
     {
@@ -12,6 +11,12 @@
       "description": "Deepak Singh Kharware - Professional Headshot",
       "imageUrl": "https://cdn.shopify.com/s/files/1/0688/0870/4151/files/new-my.webp?v=1777974328",
       "imageHint": "man suit"
+    },
+    {
+      "id": "project-simco",
+      "description": "Simco Auto - B2B Parts Distribution",
+      "imageUrl": "https://s0.wp.com/mshots/v1/https%3A%2F%2Fwww.simcoauto.com?w=800&h=600",
+      "imageHint": "auto parts"
     },
     {
       "id": "project-encompass",
