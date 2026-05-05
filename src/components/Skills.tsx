@@ -27,7 +27,7 @@ const SKILL_CATEGORIES = [
   {
     title: 'Engineering Leadership',
     icon: <Monitor className="h-6 w-6 text-primary" />,
-    skills: ['Technical Mentoring', 'Code Reviews', 'System Design', 'Team Management'],
+    skills: ['Technical Mentoring', 'Code Reviews', 'Team Management'],
   },
   {
     title: 'Performance & UX',
