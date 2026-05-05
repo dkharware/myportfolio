@@ -404,7 +404,7 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
         <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
           {/* Enhanced Tab Navigation Fix */}
           <div className="w-full">
-            <div className="flex justify-start overflow-x-auto pb-6 scrollbar-hide touch-pan-x px-6">
+            <div className="flex justify-start overflow-x-auto pb-6 scrollbar-hide touch-pan-x">
               <TabsList className="flex items-center gap-2 bg-secondary/30 p-2 rounded-[2rem] h-auto border-2 border-primary/5">
                 {CATEGORIES.map((cat) => (
                   <TabsTrigger 
