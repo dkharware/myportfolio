@@ -25,12 +25,15 @@ import {
   Code, 
   CheckCircle2, 
   Briefcase, 
-  Layers 
+  Layers,
+  Cpu,
+  Tv
 } from 'lucide-react';
 
 const CATEGORIES = [
   "All",
   "Appliance Parts",
+  "Electronics",
   "Medical",
   "Blog",
   "Travel",
@@ -39,101 +42,219 @@ const CATEGORIES = [
 
 const PROJECTS = [
   {
-    title: 'Jewelebrate',
-    category: 'Fashion',
-    description: 'Developed custom interactive features and a high-performance UI for a premium jewelry marketplace. Focused on luxury user experience and complex attribute management.',
-    role: 'Senior Frontend Developer',
-    url: 'https://jewelebrate.com',
-    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fjewelebrate.com?w=800&h=600`,
-    tags: ['React', 'Custom Features', 'Luxury UI'],
-    icon: <ShoppingBag className="h-6 w-6" />,
-    achievements: [
-      'Engineered custom product customization engines for luxury jewelry',
-      'Designed and implemented a mobile-first, high-fidelity UI layout',
-      'Integrated advanced filtering systems for complex jewelry attributes',
-      'Optimized site speed and conversion rates for high-ticket item checkout'
-    ]
-  },
-  {
-    title: 'Encompass eCommerce',
+    title: 'Samsung Parts',
     category: 'Appliance Parts',
-    description: 'Lead engineer for 20+ flagship eCommerce sites including samsungparts.com. Architected custom interactive exploded view components.',
+    description: 'Flagship eCommerce platform for official Samsung replacement parts. Engineered high-performance part search and interactive exploded views.',
     role: 'Senior Frontend Lead',
     url: 'https://samsungparts.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsamsungparts.com?w=800&h=600`,
-    tags: ['Next.js', 'Shopify Storefront API', 'Performance'],
+    tags: ['Next.js', 'Shopify Storefront API', 'Exploded Views'],
     icon: <Wrench className="h-6 w-6" />,
     achievements: [
-      'Architected interactive "Exploded View" components for parts identification',
-      'Integrated complex Shopify APIs for global product management',
-      'Led the migration of 20+ OEM sites to a modern headless architecture',
-      'Optimized load times by 40% using advanced Next.js caching strategies'
+      'Architected interactive SVG-based "Exploded View" components for parts identification',
+      'Optimized search indexing for over 500,000 unique SKU combinations',
+      'Led the frontend transition to a headless architecture using Next.js 15',
+      'Improved mobile conversion rate by 35% through streamlined checkout UX'
+    ]
+  },
+  {
+    title: 'LG Parts',
+    category: 'Appliance Parts',
+    description: 'Official LG parts distribution platform. Implemented robust filtering and real-time inventory synchronization.',
+    role: 'Lead Frontend Architect',
+    url: 'https://lgparts.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Flgparts.com?w=800&h=600`,
+    tags: ['React', 'API Integration', 'Scalable UI'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Developed a high-performance filtering engine for complex appliance models',
+      'Integrated real-time inventory tracking across multiple warehouses',
+      'Established a unified component library used across all OEM part stores',
+      'Achieved sub-second page loads for critical product detail pages'
+    ]
+  },
+  {
+    title: 'Sony Parts',
+    category: 'Electronics',
+    description: 'Comprehensive parts store for Sony consumer electronics. Focused on high-fidelity UI and seamless user journeys.',
+    role: 'Senior Frontend Developer',
+    url: 'https://sonyparts.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsonyparts.com?w=800&h=600`,
+    tags: ['TypeScript', 'Tailwind', 'Next.js'],
+    icon: <Tv className="h-6 w-6" />,
+    achievements: [
+      'Implemented a pixel-perfect design system adhering to Sony brand guidelines',
+      'Optimized asset delivery for media-heavy parts catalogs',
+      'Developed custom data visualization tools for tech-support documentation',
+      'Integrated secure payment gateways with enterprise-level encryption'
+    ]
+  },
+  {
+    title: 'Jewelebrate',
+    category: 'Fashion',
+    description: 'Premium jewelry marketplace. Developed custom product customizers and high-end interactive UI features.',
+    role: 'Senior Frontend Developer',
+    url: 'https://jewelebrate.com',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fjewelebrate.com?w=800&h=600`,
+    tags: ['React', 'Custom UI', 'Luxury UX'],
+    icon: <ShoppingBag className="h-6 w-6" />,
+    achievements: [
+      'Engineered a dynamic 3D-style jewelry customizer for rings and necklaces',
+      'Implemented advanced attribute filtering for diamond and metal specifications',
+      'Developed a mobile-first, high-fidelity responsive layout for global reach',
+      'Optimized image loading for high-resolution jewelry photography'
+    ]
+  },
+  {
+    title: 'Bertazzoni Part Store',
+    category: 'Appliance Parts',
+    description: 'Specialized parts engine for luxury Italian appliance brand Bertazzoni. Focus on high-end UX.',
+    role: 'Senior Frontend Developer',
+    url: 'https://bertazzonipartstore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fbertazzonipartstore.com?w=800&h=600`,
+    tags: ['Headless', 'Luxury Brand', 'Vercel'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Created a sophisticated, brand-aligned UI for elite appliance owners',
+      'Developed localized search features for the North American market',
+      'Integrated complex warranty tracking systems for premium products'
+    ]
+  },
+  {
+    title: 'Genuine Replacement Parts',
+    category: 'Appliance Parts',
+    description: 'Multi-brand appliance parts aggregator. Built for maximum performance and broad model compatibility.',
+    role: 'Frontend Architect',
+    url: 'https://genuinereplacementparts.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fgenuinereplacementparts.com?w=800&h=600`,
+    tags: ['Performance', 'SEO', 'React'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Optimized large-scale product catalogs for organic search performance',
+      'Implemented advanced caching layers to handle high-traffic search volume',
+      'Developed a cross-brand part compatibility checker tool'
+    ]
+  },
+  {
+    title: 'Liebherr Parts Store',
+    category: 'Appliance Parts',
+    description: 'Dedicated part ecosystem for Liebherr refrigeration solutions. Emphasis on technical accuracy.',
+    role: 'Senior Developer',
+    url: 'https://liebherrpartsstore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fliebherrpartsstore.com?w=800&h=600`,
+    tags: ['Technical UI', 'Next.js', 'B2B'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Engineered a hierarchical part navigation system for industrial refrigeration',
+      'Developed interactive parts diagrams for onsite technician use',
+      'Integrated B2B procurement portals for authorized service centers'
+    ]
+  },
+  {
+    title: 'Lenovo Parts Store',
+    category: 'Electronics',
+    description: 'Official distribution channel for Lenovo laptop and desktop components. High SKU density management.',
+    role: 'Frontend Lead',
+    url: 'https://lenovopartsstore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Flenovopartsstore.com?w=800&h=600`,
+    tags: ['Electronics', 'Complex Filters', 'Scale'],
+    icon: <Cpu className="h-6 w-6" />,
+    achievements: [
+      'Architected a serial-number based part identification engine',
+      'Managed high-density technical data displays for computer hardware',
+      'Implemented ultra-fast fuzzy search for quick part discovery'
+    ]
+  },
+  {
+    title: 'Beko Part Store',
+    category: 'Appliance Parts',
+    description: 'European market leader parts platform. Optimized for global expansion and multi-lingual support.',
+    role: 'Senior Frontend Developer',
+    url: 'https://bekopartstore.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fbekopartstore.com?w=800&h=600`,
+    tags: ['Global Scale', 'Liquid', 'Theme Design'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Developed a scalable multi-region frontend architecture',
+      'Integrated localized currency and tax calculation engines',
+      'Ensured 100% WCAG accessibility compliance'
+    ]
+  },
+  {
+    title: 'Smeg Spare Parts',
+    category: 'Appliance Parts',
+    description: 'Design-centric parts store for Smeg appliances. Balancing aesthetic appeal with technical utility.',
+    role: 'Frontend UI Specialist',
+    url: 'https://smegspareparts.com/',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fsmegspareparts.com?w=800&h=600`,
+    tags: ['Aesthetic UI', 'Motion', 'React'],
+    icon: <Wrench className="h-6 w-6" />,
+    achievements: [
+      'Implemented brand-accurate animations for a luxury Italian feel',
+      'Created custom iconography for technical appliance components',
+      'Optimized the mobile checkout flow for non-technical users'
     ]
   },
   {
     title: 'StoreDevGuide',
     category: 'Blog',
-    description: 'Dev-centric blogging platform built with Headless Shopify. Features server-side rendering for optimal SEO and performance.',
+    description: 'Technical blogging platform for Headless Shopify developers. Perfect Lighthouse scores.',
     role: 'Full Stack Architect',
     url: 'https://storedevguide.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fstoredevguide.com?w=800&h=600`,
-    tags: ['Headless', 'SSR', 'Vercel'],
+    tags: ['Next.js', 'Headless', 'Vercel'],
     icon: <Code className="h-6 w-6" />,
     achievements: [
-      'Built a custom Headless CMS layer over Shopify Storefront API',
-      'Implemented SSR/SSG patterns for perfect Lighthouse SEO scores',
-      'Developed interactive coding quizzes and skill assessment tools',
-      'Established automated CI/CD pipelines on Vercel'
+      'Built a headless CMS layer on top of Shopify Storefront API',
+      'Achieved 100/100 Lighthouse performance and SEO scores',
+      'Implemented interactive code playgrounds and syntax highlighting'
     ]
   },
   {
     title: 'Al Khaleej Tours',
     category: 'Travel',
-    description: 'High-performance booking engine for premium travel tours. Real-time data integration with asynchronous state management.',
-    role: 'Senior Frontend Developer',
+    description: 'Luxury travel booking platform for the MENA region. Real-time availability engine.',
+    role: 'Lead Frontend Developer',
     url: 'https://alkhaleejtours.org',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Falkhaleejtours.org?w=800&h=600`,
-    tags: ['JS ES6+', 'UX Design', 'API-First'],
+    tags: ['Booking Engine', 'API-First', 'React'],
     icon: <Globe className="h-6 w-6" />,
     achievements: [
-      'Engineered a dynamic tour listing engine with real-time filtering',
-      'Reduced booking friction by 25% through UX-focused form design',
-      'Implemented robust client-side validation and error handling systems',
-      'Optimized asset delivery for high-performance in low-bandwidth regions'
+      'Engineered an asynchronous tour availability and pricing engine',
+      'Developed a custom date-picker for multi-day tour packages',
+      'Integrated Arabic RTL (Right-to-Left) layout support'
     ]
   },
   {
     title: 'Marimekko Global',
     category: 'Fashion',
-    description: 'Global fashion marketplace for a Finnish premium brand. Focus on high-fidelity design implementation and fluid motion.',
-    role: 'Shopify Developer / UI Lead',
+    description: 'Finnish design house global eCommerce. High-fidelity motion and premium design implementation.',
+    role: 'UI Lead / Shopify Developer',
     url: 'https://marimekko.com',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fmarimekko.com?w=800&h=600`,
-    tags: ['Liquid', 'Motion', 'Global Scale'],
+    tags: ['Design System', 'Liquid', 'Premium UX'],
     icon: <Shirt className="h-6 w-6" />,
     achievements: [
-      'Translated high-fidelity Figma designs into pixel-perfect Liquid templates',
-      'Integrated complex third-party apps for localized global commerce',
-      'Implemented advanced animation patterns for a luxury brand feel',
-      'Maintained 99.9% uptime during high-traffic global launch events'
+      'Translated complex high-fidelity Figma designs into pixel-perfect Liquid templates',
+      'Implemented advanced animation patterns for a luxury brand experience',
+      'Architected a modular component system for global regional launches'
     ]
   },
   {
     title: 'Med-Tech Supply',
     category: 'Medical',
-    description: 'B2B healthcare equipment platform. Engineered for strict procurement compliance and robust inventory handling.',
-    role: 'Frontend Architect',
+    description: 'B2B healthcare equipment platform. Engineered for strict procurement workflows.',
+    role: 'Senior Architect',
     url: '#',
     image: PlaceHolderImages.find(img => img.id === 'project-medical')?.imageUrl || 'https://picsum.photos/seed/medical/800/600',
-    tags: ['B2B', 'Security', 'Enterprise'],
+    tags: ['B2B', 'Enterprise', 'HIPAA'],
     icon: <Stethoscope className="h-6 w-6" />,
     achievements: [
-      'Architected a HIPAA-compliant frontend interface for medical orders',
-      'Built a robust bulk-order inventory management dashboard',
-      'Implemented role-based access control for procurement officers',
-      'Ensured 100% WCAG accessibility compliance across the platform'
+      'Designed a secure procurement portal for institutional healthcare orders',
+      'Implemented complex role-based access for buyer approval workflows',
+      'Optimized bulk-ordering tools for enterprise inventory management'
     ]
-  },
+  }
 ];
 
 export function Projects({ limit }: { limit?: number }) {
@@ -149,7 +270,7 @@ export function Projects({ limit }: { limit?: number }) {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <Tabs defaultValue="All" className="space-y-12" onValueChange={setActiveTab}>
-          <div className="flex justify-start md:justify-center overflow-x-auto pb-4">
+          <div className="flex justify-start md:justify-center overflow-x-auto pb-4 scrollbar-hide">
             <TabsList className="bg-secondary p-1.5 rounded-[1.5rem] h-auto border-2 border-primary/5">
               {CATEGORIES.map((cat) => (
                 <TabsTrigger 
