@@ -7,7 +7,7 @@ const SKILL_CATEGORIES = [
   {
     title: 'Master Tech Stack',
     icon: <Code2 className="h-6 w-6 text-primary" />,
-    skills: ['Next.js 15', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript', 'HTML', 'CSS', 'Tailwind'],
+    skills: ['Next.js', 'React.js', 'TypeScript', 'GraphQL', 'JavaScript', 'HTML', 'CSS', 'Tailwind'],
   },
   {
     title: 'eCommerce Architecture',
@@ -32,7 +32,7 @@ const SKILL_CATEGORIES = [
   {
     title: 'Performance & UX',
     icon: <Zap className="h-6 w-6 text-primary" />,
-    skills: ['Core Web Vitals', 'SSR / ISR', 'SEO Strategy', 'Accessibility (a11y)'],
+    skills: ['Core Web Vitals', 'SSR / ISR', 'SEO Strategy'],
   },
 ];
 

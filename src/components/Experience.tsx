@@ -10,7 +10,7 @@ const EXPERIENCES = [
     achievements: [
       'Architected scalable Shopify & React platforms for major OEM brands',
       'Optimized core web vitals resulting in a 30% improvement in SEO ranking',
-      'Implemented advanced headless commerce patterns using Next.js 15'
+      'Implemented advanced headless commerce patterns using Next.js'
     ],
   },
   {
