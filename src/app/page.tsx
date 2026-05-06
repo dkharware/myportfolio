@@ -30,7 +30,7 @@ export default function Home() {
               </div>
             </div>
             
-            <Projects isSlider={true} />
+            <Projects isSlider={true} showViewAll={true} />
           </div>
         </section>
       </main>

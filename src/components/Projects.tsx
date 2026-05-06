@@ -239,7 +239,7 @@ const PROJECTS = [
   {
     title: 'Giftmix',
     category: 'Gifting / Bundling',
-    description: 'Engineered a custom advanced bundle system using Shopify Cart API and Vanilla JS to bypass native bundling limitations.',
+    description: 'Engineered a custom advanced bundle system using Shopify Cart API and Vanilla JS to bypass native bundling limitations. I handled product selection, variant mapping, and API integration to ensure all items are added in one request.',
     role: 'Senior Frontend Architect',
     url: 'https://shopgiftmix.com/',
     image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Fshopgiftmix.com?w=800&h=600`,
@@ -299,7 +299,12 @@ const PROJECTS = [
   }
 ];
 
-export function Projects({ isSlider = false }: { isSlider?: boolean }) {
+interface ProjectsProps {
+  isSlider?: boolean;
+  showViewAll?: boolean;
+}
+
+export function Projects({ isSlider = false, showViewAll = false }: ProjectsProps) {
   const [activeTab, setActiveTab] = React.useState("All");
 
   const filteredProjects = activeTab === "All" 
@@ -462,7 +467,7 @@ export function Projects({ isSlider = false }: { isSlider?: boolean }) {
             )}
           </div>
 
-          {activeTab === "All" && (
+          {showViewAll && activeTab === "All" && (
             <div className="flex justify-center pt-12">
               <Button asChild variant="outline" size="lg" className="rounded-2xl h-14 px-10 text-lg font-black border-2 gap-3 hover:bg-primary hover:text-white transition-all shadow-xl shadow-primary/5">
                 <Link href="/projects">
