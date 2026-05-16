@@ -61,11 +61,28 @@ const OEM_ACHIEVEMENTS = [
   "Architected scalable Shopify-based platforms for major US OEM brands",
   "Developed custom themes and integrated Shopify APIs for complex product management",
   "Implemented interactive 'Exploded View' features for visual parts discovery",
-  "Focused heavily on performance optimization, accessibility, and Core Web Vitals",
+  "Focused heavily on performance optimization and Core Web Vitals",
   "Managed team coordination to ensure smooth feature delivery and engineering standards"
 ];
 
 const PROJECTS = [
+  {
+    title: 'FastPart Store',
+    category: 'Appliance Parts',
+    description: 'Led front-end development for scalable Shopify-based eCommerce platforms serving US OEM brands. Built a scalable eCommerce platform using React.js, Tailwind CSS, Redux, and Shopify Storefront API. Implemented Algolia search & filtering, cart flow with Redux, and Shopify Checkout integration for seamless user experience.',
+    role: 'Front-End Lead',
+    url: 'https://fastpart.store',
+    image: `https://s0.wp.com/mshots/v1/https%3A%2F%2Ffastpart.store?w=800&h=600`,
+    tags: ['React.js', 'Tailwind CSS', 'Redux', 'Storefront API'],
+    icon: <Layers className="h-6 w-6" />,
+    achievements: [
+      "Built a scalable eCommerce platform using React.js, Tailwind CSS, Redux, and Shopify Storefront API",
+      "Implemented Algolia search & filtering and Shopify Checkout integration",
+      "Optimized frontend performance, responsive UI, and API-driven product management",
+      "Developed reusable component architecture to improve scalability and user engagement",
+      "Engineered high-performance cart flows and state management using Redux"
+    ]
+  },
   {
     title: 'Samsung Parts',
     category: 'Appliance Parts',
